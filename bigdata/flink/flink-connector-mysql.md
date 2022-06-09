@@ -42,12 +42,12 @@ CREATE TABLE `ybsj_xxb`  (
   PRIMARY KEY (data_up_uuid) NOT ENFORCED
 ) WITH (
     'connector' = 'mysql-cdc',
-    'hostname' = '116.1.10.1',
-    'port' = '20783',
-    'username' = 'left_flink_user',
-    'password' = 'left_flink_user',
-    'database-name' = 'left_zsj',
-    'table-name' = 'ybsj_xxb',
+    'hostname' = 'xxx',
+    'port' = '3306',
+    'username' = 'user',
+    'password' = 'pass',
+    'database-name' = 'dbname',
+    'table-name' = 'tablename',
     'server-time-zone' = 'Asia/Shanghai',
     'scan.startup.mode' = 'latest-offset',
     'scan.snapshot.fetch.size' = '2048',
@@ -96,10 +96,10 @@ CREATE TABLE `ybsj_xxb_s`  (
   PRIMARY KEY (data_up_uuid) NOT ENFORCED
 ) WITH (
     'connector' = 'jdbc',
-    'url' = 'jdbc:mysql://116.1.20.65:13307/wjw?serverTimezone=Asia/Shanghai&useunicode=true&characterEncoding=utf8&yearIsDateType=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&rewriteBatchedStatements=true',
-    'username' = 'wjw',
-    'password' = 'Xfn33edfgt4KANY',
-    'table-name' = 'ybsj_xxb_s',
+    'url' = 'jdbc:mysql://xxx/database?serverTimezone=Asia/Shanghai&useunicode=true&characterEncoding=utf8&yearIsDateType=false&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false&rewriteBatchedStatements=true',
+    'username' = 'user',
+    'password' = 'pass',
+    'table-name' = 'tablename',
     'sink.buffer-flush.max-rows' = '2048',
     'sink.parallelism' = '12',
     'sink.buffer-flush.interval' = '2s'
