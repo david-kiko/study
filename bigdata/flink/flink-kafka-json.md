@@ -76,7 +76,7 @@ WATERMARK FOR ts_ltz AS ts_ltz - INTERVAL '10' SECOND
 WITH(
 'connector' = 'kafka',
 'topic' = 'appupload',
-'properties.bootstrap.servers' = 'testbee.cguardian.com:10012',
+'properties.bootstrap.servers' = 'xxx',
 'properties.group.id' = 'testGroup',
 'format' = 'json',
 'scan.startup.mode' = 'earliest-offset',

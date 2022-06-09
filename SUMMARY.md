@@ -13,6 +13,8 @@
     * [k8s kubeadm安装](deploy/k8s/k8s-kubeadm.md)
   * [clickhouse](deploy/clickhouse/index.md)
     * [容器部署clickhouse + tabix](deploy/clickhouse/clickhouse-docker.md)
+  * [grafana+promethus+alertmanager](deploy/gpa/index.md)
+    * [容器部署gpa](deploy/gpa/gpa-docker.md)
   * [flink](deploy/flink/index.md)
     * [flink ha 部署](deploy/flink/flink-ha-systemd.md)
     * [flink web 部署](deploy/flink/flink-web.md)
