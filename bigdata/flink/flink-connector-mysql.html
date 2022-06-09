@@ -351,14 +351,29 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.3.1" data-path="../../deploy/gpa/gpa-docker.md">
+        <li class="chapter " data-level="1.3.3.1" data-path="../../deploy/gpa/gpa-docker.html">
             
-                <span>
+                <a href="../../deploy/gpa/gpa-docker.html">
             
                     
                         <b>1.3.3.1.</b>
                     
                     容器部署gpa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../deploy/gpa/grafana-clickhouse-plugin.html">
+            
+                <a href="../../deploy/gpa/grafana-clickhouse-plugin.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    grafana安装clickhouse插件
             
                 </a>
             
@@ -528,12 +543,12 @@
   PRIMARY KEY (data_up_uuid) NOT ENFORCED
 ) WITH (
     &apos;connector&apos; = &apos;mysql-cdc&apos;,
-    &apos;hostname&apos; = &apos;116.1.10.1&apos;,
-    &apos;port&apos; = &apos;20783&apos;,
-    &apos;username&apos; = &apos;left_flink_user&apos;,
-    &apos;password&apos; = &apos;left_flink_user&apos;,
-    &apos;database-name&apos; = &apos;left_zsj&apos;,
-    &apos;table-name&apos; = &apos;ybsj_xxb&apos;,
+    &apos;hostname&apos; = &apos;xxx&apos;,
+    &apos;port&apos; = &apos;3306&apos;,
+    &apos;username&apos; = &apos;user&apos;,
+    &apos;password&apos; = &apos;pass&apos;,
+    &apos;database-name&apos; = &apos;dbname&apos;,
+    &apos;table-name&apos; = &apos;tablename&apos;,
     &apos;server-time-zone&apos; = &apos;Asia/Shanghai&apos;,
     &apos;scan.startup.mode&apos; = &apos;latest-offset&apos;,
     &apos;scan.snapshot.fetch.size&apos; = &apos;2048&apos;,
@@ -579,10 +594,10 @@
   PRIMARY KEY (data_up_uuid) NOT ENFORCED
 ) WITH (
     &apos;connector&apos; = &apos;jdbc&apos;,
-    &apos;url&apos; = &apos;jdbc:mysql://116.1.20.65:13307/wjw?serverTimezone=Asia/Shanghai&amp;useunicode=true&amp;characterEncoding=utf8&amp;yearIsDateType=false&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;rewriteBatchedStatements=true&apos;,
-    &apos;username&apos; = &apos;wjw&apos;,
-    &apos;password&apos; = &apos;Xfn33edfgt4KANY&apos;,
-    &apos;table-name&apos; = &apos;ybsj_xxb_s&apos;,
+    &apos;url&apos; = &apos;jdbc:mysql://xxx/database?serverTimezone=Asia/Shanghai&amp;useunicode=true&amp;characterEncoding=utf8&amp;yearIsDateType=false&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;rewriteBatchedStatements=true&apos;,
+    &apos;username&apos; = &apos;user&apos;,
+    &apos;password&apos; = &apos;pass&apos;,
+    &apos;table-name&apos; = &apos;tablename&apos;,
     &apos;sink.buffer-flush.max-rows&apos; = &apos;2048&apos;,
     &apos;sink.parallelism&apos; = &apos;12&apos;,
     &apos;sink.buffer-flush.interval&apos; = &apos;2s&apos;
@@ -598,7 +613,7 @@
   from ybsj_xxb;
 </code></pre>
 <footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-05-31 10:56:48
+2022-06-09 17:24:38
 </span></footer>
                                 
                                 </section>
@@ -632,7 +647,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接mysql binlog","level":"1.2.2.2","depth":3,"next":{"title":"快速部署","level":"1.3","depth":1,"path":"deploy/index.md","ref":"deploy/index.md","articles":[{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},{"title":"grafana+promethus+alertmanager","level":"1.3.3","depth":2,"path":"deploy/gpa/index.md","ref":"deploy/gpa/index.md","articles":[{"title":"容器部署gpa","level":"1.3.3.1","depth":3,"path":"deploy/gpa/gpa-docker.md","ref":"deploy/gpa/gpa-docker.md","articles":[]}]},{"title":"flink","level":"1.3.4","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.4.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.4.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.4.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]}]},"previous":{"title":"对接kafka，处理json数据","level":"1.2.2.1","depth":3,"path":"bigdata/flink/flink-kafka-json.md","ref":"bigdata/flink/flink-kafka-json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/flink/flink-connector-mysql.md","mtime":"2022-05-31T02:56:48.182Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-09T01:43:25.983Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对接mysql binlog","level":"1.2.2.2","depth":3,"next":{"title":"快速部署","level":"1.3","depth":1,"path":"deploy/index.md","ref":"deploy/index.md","articles":[{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},{"title":"grafana+promethus+alertmanager","level":"1.3.3","depth":2,"path":"deploy/gpa/index.md","ref":"deploy/gpa/index.md","articles":[{"title":"容器部署gpa","level":"1.3.3.1","depth":3,"path":"deploy/gpa/gpa-docker.md","ref":"deploy/gpa/gpa-docker.md","articles":[]},{"title":"grafana安装clickhouse插件","level":"1.3.3.2","depth":3,"path":"deploy/gpa/grafana-clickhouse-plugin.md","ref":"deploy/gpa/grafana-clickhouse-plugin.md","articles":[]}]},{"title":"flink","level":"1.3.4","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.4.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.4.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.4.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]}]},"previous":{"title":"对接kafka，处理json数据","level":"1.2.2.1","depth":3,"path":"bigdata/flink/flink-kafka-json.md","ref":"bigdata/flink/flink-kafka-json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/flink/flink-connector-mysql.md","mtime":"2022-06-09T09:24:38.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-09T09:25:17.300Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
