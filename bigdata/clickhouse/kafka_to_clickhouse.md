@@ -32,7 +32,7 @@ CREATE TABLE kafka_readings_queue (
 `message` String
 )
 ENGINE = Kafka
-SETTINGS kafka_broker_list = 'testbee.cguardian.com:10012',
+SETTINGS kafka_broker_list = 'xxx',
        kafka_topic_list = 'appupload',
        kafka_group_name = 'test_new_ck',
        kafka_format = 'JSONAsString',
