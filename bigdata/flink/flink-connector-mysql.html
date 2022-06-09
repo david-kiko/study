@@ -504,39 +504,8 @@
                                 
                                 <h1 id="flink-connector-&#x5BF9;&#x63A5;mysql-binlog">flink-connector &#x5BF9;&#x63A5;mysql binlog</h1>
 <h2 id="1&#x914D;&#x7F6E;mysql-source-table">1.&#x914D;&#x7F6E;mysql source table</h2>
-<pre class="language-"><code class="lang-text">CREATE TABLE `ybsj_xxb`  (
-  `UID_SS` string,
-  `CI_LASTUPDATE` TIMESTAMP(3) COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;&apos;,
-  `CI_LASTUPTIME` bigint COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&apos;,
-  `CI_AUDITTAG` bigint COMMENT &apos;&#x5BA1;&#x6838;&#x6807;&#x8BB0;&apos;,
-  `DAY` string,
-  `DIM_TBDW` string  COMMENT &apos;&#x586B;&#x62A5;&#x5355;&#x4F4D;&apos;,
-  `YBBH` string COMMENT &apos;&#x552F;&#x4E00;&#x952E;&apos;,
-  `CYRQ` TIMESTAMP(3) COMMENT &apos;&#x91C7;&#x6837;&#x65E5;&#x671F;&apos;,
-  `XM` string COMMENT &apos;&#x59D3;&#x540D;&apos;,
-  `NL` bigint COMMENT &apos;&#x5E74;&#x9F84;&apos;,
-  `XB` string COMMENT &apos;&#x6027;&#x522B;&apos;,
-  `SFZH` string COMMENT &apos;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&apos;,
-  `JCORG` string COMMENT &apos;&#x68C0;&#x6D4B;&#x673A;&#x6784;&apos;,
-  `BSRQ` TIMESTAMP(3) COMMENT &apos;&#x7CFB;&#x7EDF;&#x586B;&#x62A5;&#x65E5;&#x671F;&apos;,
-  `YBLY` string COMMENT &apos;&#x6837;&#x672C;&#x6765;&#x6E90;&apos;,
-  `ZJLX` string COMMENT &apos;&#x8BC1;&#x4EF6;&#x7C7B;&#x578B;&apos;,
-  `SYBM` string COMMENT &apos;&#x9001;&#x6837;&#x7F16;&#x53F7;&apos;,
-  `BLLXJJCCS` string COMMENT &apos;&#x75C5;&#x4F8B;&#x7C7B;&#x578B;&#x53CA;&#x68C0;&#x6D4B;&#x6B21;&#x6570;&apos;,
-  `HZID` string COMMENT &apos;&#x60A3;&#x8005;ID&apos;,
-  `LXDH` string COMMENT &apos;&#x8054;&#x7CFB;&#x7535;&#x8BDD;&apos;,
-  `YBLX` string COMMENT &apos;&#x6837;&#x672C;&#x7C7B;&#x578B;&apos;,
-  `SFJYLH` string COMMENT &apos;&#x4EBA;&#x5458;&#x7C7B;&#x578B;&#x539F;&#xFF1A;&#x5883;&#x5916;&#x8FD4;&#xFF08;&#x6765;&#xFF09;&#x6C49;&#x4EBA;&#x5458;&#x5B57;&#x6BB5;&#x6CBF;&#x7528;&#x4E0B;&#x6765;&apos;,
-  `qycj_rwdm` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x4EE3;&#x7801;&apos;,
-  `qycj_rwmc` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x540D;&#x79F0;&apos;,
-  `CYDD` string COMMENT &apos;&#x91C7;&#x6837;&#x5730;&#x70B9;&apos;,
-  `HYFS` string COMMENT &apos;&#x6DF7;&#x6837;&#x65B9;&#x5F0F;&apos;,
-  `sjly` string,
-  `create_time` TIMESTAMP(0),
-  `sz_uptime` TIMESTAMP(0),
-  `ssrq` string,
-  `cyfzr` string,
-  `lxfs` string,
+<pre class="language-"><code class="lang-text">CREATE TABLE `source_table`  (
+  `source_columns`,
   `data_up_uuid` int,
   `data_up_time` TIMESTAMP(0),
   `data_up_status` string,
@@ -556,39 +525,8 @@
   );
 </code></pre>
 <h2 id="2&#x521B;&#x5EFA;sink-table">2.&#x521B;&#x5EFA;sink table</h2>
-<pre class="language-"><code class="lang-text">CREATE TABLE `ybsj_xxb_s`  (
-  `UID_SS` string,
-  `CI_LASTUPDATE` TIMESTAMP(3) COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;&apos;,
-  `CI_LASTUPTIME` bigint COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&apos;,
-  `CI_AUDITTAG` bigint COMMENT &apos;&#x5BA1;&#x6838;&#x6807;&#x8BB0;&apos;,
-  `DAY` string,
-  `DIM_TBDW` string COMMENT &apos;&#x586B;&#x62A5;&#x5355;&#x4F4D;&apos;,
-  `YBBH` string COMMENT &apos;&#x552F;&#x4E00;&#x952E;&apos;,
-  `CYRQ` TIMESTAMP(3) COMMENT &apos;&#x91C7;&#x6837;&#x65E5;&#x671F;&apos;,
-  `XM` string COMMENT &apos;&#x59D3;&#x540D;&apos;,
-  `NL` bigint COMMENT &apos;&#x5E74;&#x9F84;&apos;,
-  `XB` string COMMENT &apos;&#x6027;&#x522B;&apos;,
-  `SFZH` string COMMENT &apos;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&apos;,
-  `JCORG` string COMMENT &apos;&#x68C0;&#x6D4B;&#x673A;&#x6784;&apos;,
-  `BSRQ` TIMESTAMP COMMENT &apos;&#x7CFB;&#x7EDF;&#x586B;&#x62A5;&#x65E5;&#x671F;&apos;,
-  `YBLY` string COMMENT &apos;&#x6837;&#x672C;&#x6765;&#x6E90;&apos;,
-  `ZJLX` string COMMENT &apos;&#x8BC1;&#x4EF6;&#x7C7B;&#x578B;&apos;,
-  `SYBM` string COMMENT &apos;&#x9001;&#x6837;&#x7F16;&#x53F7;&apos;,
-  `BLLXJJCCS` string COMMENT &apos;&#x75C5;&#x4F8B;&#x7C7B;&#x578B;&#x53CA;&#x68C0;&#x6D4B;&#x6B21;&#x6570;&apos;,
-  `HZID` string COMMENT &apos;&#x60A3;&#x8005;ID&apos;,
-  `LXDH` string COMMENT &apos;&#x8054;&#x7CFB;&#x7535;&#x8BDD;&apos;,
-  `YBLX` string COMMENT &apos;&#x6837;&#x672C;&#x7C7B;&#x578B;&apos;,
-  `SFJYLH` string COMMENT &apos;&#x4EBA;&#x5458;&#x7C7B;&#x578B;&#x539F;&#xFF1A;&#x5883;&#x5916;&#x8FD4;&#xFF08;&#x6765;&#xFF09;&#x6C49;&#x4EBA;&#x5458;&#x5B57;&#x6BB5;&#x6CBF;&#x7528;&#x4E0B;&#x6765;&apos;,
-  `qycj_rwdm` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x4EE3;&#x7801;&apos;,
-  `qycj_rwmc` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x540D;&#x79F0;&apos;,
-  `CYDD` string COMMENT &apos;&#x91C7;&#x6837;&#x5730;&#x70B9;&apos;,
-  `HYFS` string COMMENT &apos;&#x6DF7;&#x6837;&#x65B9;&#x5F0F;&apos;,
-  `sjly` string,
-  `create_time` TIMESTAMP,
-  `sz_uptime` TIMESTAMP,
-  `ssrq` string,
-  `cyfzr` string,
-  `lxfs` string,
+<pre class="language-"><code class="lang-text">CREATE TABLE `sink_table`  (
+  `sink_columns`,
   `data_up_uuid` int,
   `data_up_time` TIMESTAMP(0),
   PRIMARY KEY (data_up_uuid) NOT ENFORCED
@@ -604,16 +542,12 @@
   );
 </code></pre>
 <h2 id="3&#x4ECE;source&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5230;sink">3.&#x4ECE;source&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5230;sink</h2>
-<pre class="language-"><code class="lang-text">  insert into ybsj_xxb_s(`UID_SS`,`CI_LASTUPDATE`,`CI_LASTUPTIME`,`CI_AUDITTAG`,`DAY`,`DIM_TBDW`,`YBBH`,`CYRQ`,`XM`,`NL`,`XB`,`SFZH`,
-                       `JCORG`,`BSRQ`,`YBLY`,`ZJLX`,`SYBM` ,`BLLXJJCCS`,`HZID`,`LXDH`,`YBLX`,`SFJYLH`,`qycj_rwdm`,`qycj_rwmc`,`CYDD`,
-                        `HYFS`,`sjly`,`create_time`,`sz_uptime`,`ssrq`,`cyfzr`,`lxfs`,`data_up_uuid`,`data_up_time`) 
-  select `UID_SS`,`CI_LASTUPDATE`,`CI_LASTUPTIME`,`CI_AUDITTAG`,`DAY`,`DIM_TBDW`,`YBBH`,`CYRQ`,`XM`,`NL`,`XB`,`SFZH`,
-                       `JCORG`,`BSRQ`,`YBLY`,`ZJLX`,`SYBM` ,`BLLXJJCCS`,`HZID`,`LXDH`,`YBLX`,`SFJYLH`,`qycj_rwdm`,`qycj_rwmc`,`CYDD`,
-                        `HYFS`,`sjly`,`create_time`,`sz_uptime`,`ssrq`,`cyfzr`,`lxfs`,`data_up_uuid`,`data_up_time`
-  from ybsj_xxb;
+<pre class="language-"><code class="lang-text">  insert into sink_table(`sink_columns`,`data_up_uuid`,`data_up_time`) 
+  select `source_columns`,`data_up_uuid`,`data_up_time`
+  from source_table;
 </code></pre>
 <footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-06-09 17:24:38
+2022-06-09 17:32:06
 </span></footer>
                                 
                                 </section>
@@ -647,7 +581,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"对接mysql binlog","level":"1.2.2.2","depth":3,"next":{"title":"快速部署","level":"1.3","depth":1,"path":"deploy/index.md","ref":"deploy/index.md","articles":[{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},{"title":"grafana+promethus+alertmanager","level":"1.3.3","depth":2,"path":"deploy/gpa/index.md","ref":"deploy/gpa/index.md","articles":[{"title":"容器部署gpa","level":"1.3.3.1","depth":3,"path":"deploy/gpa/gpa-docker.md","ref":"deploy/gpa/gpa-docker.md","articles":[]},{"title":"grafana安装clickhouse插件","level":"1.3.3.2","depth":3,"path":"deploy/gpa/grafana-clickhouse-plugin.md","ref":"deploy/gpa/grafana-clickhouse-plugin.md","articles":[]}]},{"title":"flink","level":"1.3.4","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.4.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.4.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.4.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]}]},"previous":{"title":"对接kafka，处理json数据","level":"1.2.2.1","depth":3,"path":"bigdata/flink/flink-kafka-json.md","ref":"bigdata/flink/flink-kafka-json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/flink/flink-connector-mysql.md","mtime":"2022-06-09T09:24:38.271Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-09T09:25:17.300Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"对接mysql binlog","level":"1.2.2.2","depth":3,"next":{"title":"快速部署","level":"1.3","depth":1,"path":"deploy/index.md","ref":"deploy/index.md","articles":[{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},{"title":"grafana+promethus+alertmanager","level":"1.3.3","depth":2,"path":"deploy/gpa/index.md","ref":"deploy/gpa/index.md","articles":[{"title":"容器部署gpa","level":"1.3.3.1","depth":3,"path":"deploy/gpa/gpa-docker.md","ref":"deploy/gpa/gpa-docker.md","articles":[]},{"title":"grafana安装clickhouse插件","level":"1.3.3.2","depth":3,"path":"deploy/gpa/grafana-clickhouse-plugin.md","ref":"deploy/gpa/grafana-clickhouse-plugin.md","articles":[]}]},{"title":"flink","level":"1.3.4","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.4.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.4.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.4.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]}]},"previous":{"title":"对接kafka，处理json数据","level":"1.2.2.1","depth":3,"path":"bigdata/flink/flink-kafka-json.md","ref":"bigdata/flink/flink-kafka-json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/flink/flink-connector-mysql.md","mtime":"2022-06-09T09:32:06.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-09T09:32:13.557Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
