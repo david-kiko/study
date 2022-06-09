@@ -1,0 +1,596 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Kafka引擎 数据导入 · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="David Li <david@linktime.cloud>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="refresh_kafka_to_clickhouse.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1.1" data-path="kafka_to_clickhouse.html">
+            
+                <a href="kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Kafka引擎 数据导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="refresh_kafka_to_clickhouse.html">
+            
+                <a href="refresh_kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Kafka引擎 数据重新刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../flink/">
+            
+                <a href="../flink/">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../flink/flink-kafka-json.html">
+            
+                <a href="../flink/flink-kafka-json.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    对接kafka，处理json数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../flink/flink-connector-mysql.html">
+            
+                <a href="../flink/flink-connector-mysql.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    对接mysql binlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../deploy/">
+            
+                <a href="../../deploy/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../deploy/k8s/">
+            
+                <a href="../../deploy/k8s/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    k8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../deploy/k8s/k8s-kubeadm.html">
+            
+                <a href="../../deploy/k8s/k8s-kubeadm.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    k8s kubeadm安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../deploy/clickhouse/">
+            
+                <a href="../../deploy/clickhouse/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../deploy/clickhouse/clickhouse-docker.html">
+            
+                <a href="../../deploy/clickhouse/clickhouse-docker.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    容器部署clickhouse + tabix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../deploy/flink/">
+            
+                <a href="../../deploy/flink/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../deploy/flink/flink-ha-systemd.html">
+            
+                <a href="../../deploy/flink/flink-ha-systemd.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    flink ha 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../deploy/flink/flink-web.html">
+            
+                <a href="../../deploy/flink/flink-web.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    flink web 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../deploy/flink/flink-metrics.html">
+            
+                <a href="../../deploy/flink/flink-metrics.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    flink metrics部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Kafka引擎 数据导入</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="clickhouse-kafka&#x5F15;&#x64CE;&#xFF0C;kafka-to-clickhouse&#x8BE6;&#x7EC6;&#x6559;&#x7A0B;">ClickHouse-Kafka&#x5F15;&#x64CE;&#xFF0C;kafka to clickhouse&#x8BE6;&#x7EC6;&#x6559;&#x7A0B;</h1>
+<p><img src="../../images/265a2117484f2b1e3cbca1ef52c87f5aec69454a65580aea0ce1ff5d3054dba9.png" alt="kafka to clickhouse"> </p>
+<h2 id="1&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x8868;">1.&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x8868;</h2>
+<ul>
+<li>&#x521B;&#x5EFA;kafka_readings&#x7528;&#x4E8E;&#x63A5;&#x6536;Kafka&#x7684;&#x6570;&#x636E;</li>
+<li>MergeTree &#x6307;&#x5B9A;&#x521B;&#x5EFA;&#x8868;&#x7684;&#x5F15;&#x64CE;</li>
+<li>PARTITION BY &#x6307;&#x5B9A;&#x6211;&#x4EEC;&#x7684;&#x5206;&#x533A;&#x6570;&#x636E;</li>
+<li>ORDER BY &#x6307;&#x5B9A;&#x6211;&#x4EEC;&#x7684;&#x6392;&#x5E8F;&#x5373;&#x7D22;&#x5F15;</li>
+<li>dt&#x5B57;&#x6BB5;&#x4E3A;&#x5177;&#x4F53;&#x4E1A;&#x52A1;&#x65F6;&#x95F4;&#x3002;</li>
+</ul>
+<pre class="language-"><code class="lang-text">CREATE TABLE kafka_readings (
+    source String,
+    deviceId String,
+    ts DateTime
+)Engine = MergeTree PARTITION BY toYYYYMMDD(ts) ORDER BY (ts);
+</code></pre>
+<h2 id="2&#x521B;&#x5EFA;&#x6D88;&#x8D39;kafka&#x6570;&#x636E;&#x8868;">2.&#x521B;&#x5EFA;&#x6D88;&#x8D39;Kafka&#x6570;&#x636E;&#x8868;</h2>
+<ul>
+<li>kafka_broker_list kafka&#x6D88;&#x8D39;&#x96C6;&#x7FA4;&#x7684;broker&#x5217;&#x8868;</li>
+<li>kafka_topic_list &#x6D88;&#x8D39;kafka&#x7684;Topic</li>
+<li>kafka_group_name kafka&#x6D88;&#x8D39;&#x7EC4;</li>
+<li>kafka_format &#x6D88;&#x8D39;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x7C7B;&#x578B;&#xFF0C;JSONEachRow&#x8868;&#x793A;&#x6BCF;&#x884C;&#x4E00;&#x6761;&#x6570;&#x636E;&#x7684;json&#x683C;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x8F93;&#x5165;&#x5D4C;&#x5957;&#x7684;json&#xFF0C;&#x8BBE;&#x7F6E;input_format_import_nested_json=1&#x3002;&#x66F4;&#x591A;&#xFF1A;<a href="https://clickhouse.tech/docs/en/interfaces/formats/" target="_blank">https://clickhouse.tech/docs/en/interfaces/formats/</a></li>
+<li>kafka_skip_broken_messages &#x8868;&#x793A;&#x5FFD;&#x7565;&#x89E3;&#x6790;&#x5F02;&#x5E38;&#x7684;Kafka&#x6570;&#x636E;&#x7684;&#x6761;&#x6570;&#x3002;&#x5982;&#x679C;&#x51FA;&#x73B0;&#x4E86;N&#x6761;&#x5F02;&#x5E38;&#x540E;&#xFF0C;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;&#xFF0C;Materialized View&#x4F1A;&#x88AB;&#x91CD;&#x65B0;&#x5B89;&#x6392;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x53BB;&#x76D1;&#x542C;&#x6570;&#x636E;</li>
+<li>kafka_num_consumers  &#x5355;&#x4E2A;Kafka Engine &#x7684;&#x6D88;&#x8D39;&#x8005;&#x6570;&#x91CF;&#xFF0C;&#x901A;&#x8FC7;&#x589E;&#x52A0;&#x8BE5;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x6D88;&#x8D39;&#x6570;&#x636E;&#x541E;&#x5410;&#xFF0C;&#x4F46;&#x603B;&#x6570;&#x4E0D;&#x5E94;&#x8D85;&#x8FC7;&#x5BF9;&#x5E94;topic&#x7684;partitions&#x603B;&#x6570;</li>
+</ul>
+<pre class="language-"><code class="lang-text">CREATE TABLE kafka_readings_queue (
+`message` String
+)
+ENGINE = Kafka
+SETTINGS kafka_broker_list = &apos;testbee.cguardian.com:10012&apos;,
+       kafka_topic_list = &apos;appupload&apos;,
+       kafka_group_name = &apos;test_new_ck&apos;,
+       kafka_format = &apos;JSONAsString&apos;,
+       kafka_skip_broken_messages = 20000,
+       kafka_num_consumers = 1;
+</code></pre>
+<h2 id="3&#x521B;&#x5EFA;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x5408;&#x5E76;&#x8868;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x5BFC;&#x5165;&#x5230;clickhouse">3.&#x521B;&#x5EFA;&#x7269;&#x5316;&#x89C6;&#x56FE;&#x5408;&#x5E76;&#x8868;&#x4F20;&#x8F93;&#x6570;&#x636E;&#xFF0C;&#x5BFC;&#x5165;&#x5230;ClickHouse</h2>
+<pre class="language-"><code class="lang-text">CREATE MATERIALIZED VIEW kafka_readings_view TO kafka_readings AS
+SELECT visitParamExtractRaw(message,&apos;source&apos;) as source
+     , visitParamExtractRaw(visitParamExtractRaw(message,&apos;msg&apos;),&apos;deviceId&apos;) as deviceId
+     , FROM_UNIXTIME(intDiv(visitParamExtractInt(JSONExtractString(visitParamExtractRaw(message,&apos;msg&apos;),&apos;message&apos;,1),&apos;start&apos;),1000)) as ts
+FROM kafka_readings_queue;
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-30 09:24:12
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Kafka引擎 数据导入","level":"1.2.1.1","depth":3,"next":{"title":"Kafka引擎 数据重新刷新","level":"1.2.1.2","depth":3,"path":"bigdata/clickhouse/refresh_kafka_to_clickhouse.md","ref":"bigdata/clickhouse/refresh_kafka_to_clickhouse.md","articles":[]},"previous":{"title":"clickhouse","level":"1.2.1","depth":2,"path":"bigdata/clickhouse/index.md","ref":"bigdata/clickhouse/index.md","articles":[{"title":"Kafka引擎 数据导入","level":"1.2.1.1","depth":3,"path":"bigdata/clickhouse/kafka_to_clickhouse.md","ref":"bigdata/clickhouse/kafka_to_clickhouse.md","articles":[]},{"title":"Kafka引擎 数据重新刷新","level":"1.2.1.2","depth":3,"path":"bigdata/clickhouse/refresh_kafka_to_clickhouse.md","ref":"bigdata/clickhouse/refresh_kafka_to_clickhouse.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/clickhouse/kafka_to_clickhouse.md","mtime":"2022-05-30T01:24:12.246Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-31T01:31:50.230Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-click-heart/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,663 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对接mysql binlog · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="David Li <david@linktime.cloud>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../deploy/" />
+    
+    
+    <link rel="prev" href="flink-kafka-json.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../clickhouse/">
+            
+                <a href="../clickhouse/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../clickhouse/kafka_to_clickhouse.html">
+            
+                <a href="../clickhouse/kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Kafka引擎 数据导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                <a href="../clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Kafka引擎 数据重新刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="flink-kafka-json.html">
+            
+                <a href="flink-kafka-json.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    对接kafka，处理json数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.2" data-path="flink-connector-mysql.html">
+            
+                <a href="flink-connector-mysql.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    对接mysql binlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../deploy/">
+            
+                <a href="../../deploy/">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../deploy/k8s/">
+            
+                <a href="../../deploy/k8s/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    k8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../deploy/k8s/k8s-kubeadm.html">
+            
+                <a href="../../deploy/k8s/k8s-kubeadm.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    k8s kubeadm安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../deploy/clickhouse/">
+            
+                <a href="../../deploy/clickhouse/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../deploy/clickhouse/clickhouse-docker.html">
+            
+                <a href="../../deploy/clickhouse/clickhouse-docker.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    容器部署clickhouse + tabix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../deploy/flink/">
+            
+                <a href="../../deploy/flink/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../deploy/flink/flink-ha-systemd.html">
+            
+                <a href="../../deploy/flink/flink-ha-systemd.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    flink ha 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../deploy/flink/flink-web.html">
+            
+                <a href="../../deploy/flink/flink-web.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    flink web 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../deploy/flink/flink-metrics.html">
+            
+                <a href="../../deploy/flink/flink-metrics.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    flink metrics部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >对接mysql binlog</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="flink-connector-&#x5BF9;&#x63A5;mysql-binlog">flink-connector &#x5BF9;&#x63A5;mysql binlog</h1>
+<h2 id="1&#x914D;&#x7F6E;mysql-source-table">1.&#x914D;&#x7F6E;mysql source table</h2>
+<pre class="language-"><code class="lang-text">CREATE TABLE `ybsj_xxb`  (
+  `UID_SS` string,
+  `CI_LASTUPDATE` TIMESTAMP(3) COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;&apos;,
+  `CI_LASTUPTIME` bigint COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&apos;,
+  `CI_AUDITTAG` bigint COMMENT &apos;&#x5BA1;&#x6838;&#x6807;&#x8BB0;&apos;,
+  `DAY` string,
+  `DIM_TBDW` string  COMMENT &apos;&#x586B;&#x62A5;&#x5355;&#x4F4D;&apos;,
+  `YBBH` string COMMENT &apos;&#x552F;&#x4E00;&#x952E;&apos;,
+  `CYRQ` TIMESTAMP(3) COMMENT &apos;&#x91C7;&#x6837;&#x65E5;&#x671F;&apos;,
+  `XM` string COMMENT &apos;&#x59D3;&#x540D;&apos;,
+  `NL` bigint COMMENT &apos;&#x5E74;&#x9F84;&apos;,
+  `XB` string COMMENT &apos;&#x6027;&#x522B;&apos;,
+  `SFZH` string COMMENT &apos;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&apos;,
+  `JCORG` string COMMENT &apos;&#x68C0;&#x6D4B;&#x673A;&#x6784;&apos;,
+  `BSRQ` TIMESTAMP(3) COMMENT &apos;&#x7CFB;&#x7EDF;&#x586B;&#x62A5;&#x65E5;&#x671F;&apos;,
+  `YBLY` string COMMENT &apos;&#x6837;&#x672C;&#x6765;&#x6E90;&apos;,
+  `ZJLX` string COMMENT &apos;&#x8BC1;&#x4EF6;&#x7C7B;&#x578B;&apos;,
+  `SYBM` string COMMENT &apos;&#x9001;&#x6837;&#x7F16;&#x53F7;&apos;,
+  `BLLXJJCCS` string COMMENT &apos;&#x75C5;&#x4F8B;&#x7C7B;&#x578B;&#x53CA;&#x68C0;&#x6D4B;&#x6B21;&#x6570;&apos;,
+  `HZID` string COMMENT &apos;&#x60A3;&#x8005;ID&apos;,
+  `LXDH` string COMMENT &apos;&#x8054;&#x7CFB;&#x7535;&#x8BDD;&apos;,
+  `YBLX` string COMMENT &apos;&#x6837;&#x672C;&#x7C7B;&#x578B;&apos;,
+  `SFJYLH` string COMMENT &apos;&#x4EBA;&#x5458;&#x7C7B;&#x578B;&#x539F;&#xFF1A;&#x5883;&#x5916;&#x8FD4;&#xFF08;&#x6765;&#xFF09;&#x6C49;&#x4EBA;&#x5458;&#x5B57;&#x6BB5;&#x6CBF;&#x7528;&#x4E0B;&#x6765;&apos;,
+  `qycj_rwdm` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x4EE3;&#x7801;&apos;,
+  `qycj_rwmc` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x540D;&#x79F0;&apos;,
+  `CYDD` string COMMENT &apos;&#x91C7;&#x6837;&#x5730;&#x70B9;&apos;,
+  `HYFS` string COMMENT &apos;&#x6DF7;&#x6837;&#x65B9;&#x5F0F;&apos;,
+  `sjly` string,
+  `create_time` TIMESTAMP(0),
+  `sz_uptime` TIMESTAMP(0),
+  `ssrq` string,
+  `cyfzr` string,
+  `lxfs` string,
+  `data_up_uuid` int,
+  `data_up_time` TIMESTAMP(0),
+  `data_up_status` string,
+  PRIMARY KEY (data_up_uuid) NOT ENFORCED
+) WITH (
+    &apos;connector&apos; = &apos;mysql-cdc&apos;,
+    &apos;hostname&apos; = &apos;116.1.10.1&apos;,
+    &apos;port&apos; = &apos;20783&apos;,
+    &apos;username&apos; = &apos;left_flink_user&apos;,
+    &apos;password&apos; = &apos;left_flink_user&apos;,
+    &apos;database-name&apos; = &apos;left_zsj&apos;,
+    &apos;table-name&apos; = &apos;ybsj_xxb&apos;,
+    &apos;server-time-zone&apos; = &apos;Asia/Shanghai&apos;,
+    &apos;scan.startup.mode&apos; = &apos;latest-offset&apos;,
+    &apos;scan.snapshot.fetch.size&apos; = &apos;2048&apos;,
+    &apos;debezium.skipped.operations&apos;=&apos;u,d&apos;
+  );
+</code></pre>
+<h2 id="2&#x521B;&#x5EFA;sink-table">2.&#x521B;&#x5EFA;sink table</h2>
+<pre class="language-"><code class="lang-text">CREATE TABLE `ybsj_xxb_s`  (
+  `UID_SS` string,
+  `CI_LASTUPDATE` TIMESTAMP(3) COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65E5;&#x671F;&apos;,
+  `CI_LASTUPTIME` bigint COMMENT &apos;&#x6700;&#x540E;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&apos;,
+  `CI_AUDITTAG` bigint COMMENT &apos;&#x5BA1;&#x6838;&#x6807;&#x8BB0;&apos;,
+  `DAY` string,
+  `DIM_TBDW` string COMMENT &apos;&#x586B;&#x62A5;&#x5355;&#x4F4D;&apos;,
+  `YBBH` string COMMENT &apos;&#x552F;&#x4E00;&#x952E;&apos;,
+  `CYRQ` TIMESTAMP(3) COMMENT &apos;&#x91C7;&#x6837;&#x65E5;&#x671F;&apos;,
+  `XM` string COMMENT &apos;&#x59D3;&#x540D;&apos;,
+  `NL` bigint COMMENT &apos;&#x5E74;&#x9F84;&apos;,
+  `XB` string COMMENT &apos;&#x6027;&#x522B;&apos;,
+  `SFZH` string COMMENT &apos;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&apos;,
+  `JCORG` string COMMENT &apos;&#x68C0;&#x6D4B;&#x673A;&#x6784;&apos;,
+  `BSRQ` TIMESTAMP COMMENT &apos;&#x7CFB;&#x7EDF;&#x586B;&#x62A5;&#x65E5;&#x671F;&apos;,
+  `YBLY` string COMMENT &apos;&#x6837;&#x672C;&#x6765;&#x6E90;&apos;,
+  `ZJLX` string COMMENT &apos;&#x8BC1;&#x4EF6;&#x7C7B;&#x578B;&apos;,
+  `SYBM` string COMMENT &apos;&#x9001;&#x6837;&#x7F16;&#x53F7;&apos;,
+  `BLLXJJCCS` string COMMENT &apos;&#x75C5;&#x4F8B;&#x7C7B;&#x578B;&#x53CA;&#x68C0;&#x6D4B;&#x6B21;&#x6570;&apos;,
+  `HZID` string COMMENT &apos;&#x60A3;&#x8005;ID&apos;,
+  `LXDH` string COMMENT &apos;&#x8054;&#x7CFB;&#x7535;&#x8BDD;&apos;,
+  `YBLX` string COMMENT &apos;&#x6837;&#x672C;&#x7C7B;&#x578B;&apos;,
+  `SFJYLH` string COMMENT &apos;&#x4EBA;&#x5458;&#x7C7B;&#x578B;&#x539F;&#xFF1A;&#x5883;&#x5916;&#x8FD4;&#xFF08;&#x6765;&#xFF09;&#x6C49;&#x4EBA;&#x5458;&#x5B57;&#x6BB5;&#x6CBF;&#x7528;&#x4E0B;&#x6765;&apos;,
+  `qycj_rwdm` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x4EE3;&#x7801;&apos;,
+  `qycj_rwmc` string COMMENT &apos;&#x5168;&#x5458;&#x68C0;&#x6D4B;&#x4EFB;&#x52A1;&#x540D;&#x79F0;&apos;,
+  `CYDD` string COMMENT &apos;&#x91C7;&#x6837;&#x5730;&#x70B9;&apos;,
+  `HYFS` string COMMENT &apos;&#x6DF7;&#x6837;&#x65B9;&#x5F0F;&apos;,
+  `sjly` string,
+  `create_time` TIMESTAMP,
+  `sz_uptime` TIMESTAMP,
+  `ssrq` string,
+  `cyfzr` string,
+  `lxfs` string,
+  `data_up_uuid` int,
+  `data_up_time` TIMESTAMP(0),
+  PRIMARY KEY (data_up_uuid) NOT ENFORCED
+) WITH (
+    &apos;connector&apos; = &apos;jdbc&apos;,
+    &apos;url&apos; = &apos;jdbc:mysql://116.1.20.65:13307/wjw?serverTimezone=Asia/Shanghai&amp;useunicode=true&amp;characterEncoding=utf8&amp;yearIsDateType=false&amp;zeroDateTimeBehavior=convertToNull&amp;tinyInt1isBit=false&amp;rewriteBatchedStatements=true&apos;,
+    &apos;username&apos; = &apos;wjw&apos;,
+    &apos;password&apos; = &apos;Xfn33edfgt4KANY&apos;,
+    &apos;table-name&apos; = &apos;ybsj_xxb_s&apos;,
+    &apos;sink.buffer-flush.max-rows&apos; = &apos;2048&apos;,
+    &apos;sink.parallelism&apos; = &apos;12&apos;,
+    &apos;sink.buffer-flush.interval&apos; = &apos;2s&apos;
+  );
+</code></pre>
+<h2 id="3&#x4ECE;source&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5230;sink">3.&#x4ECE;source&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5230;sink</h2>
+<pre class="language-"><code class="lang-text">  insert into ybsj_xxb_s(`UID_SS`,`CI_LASTUPDATE`,`CI_LASTUPTIME`,`CI_AUDITTAG`,`DAY`,`DIM_TBDW`,`YBBH`,`CYRQ`,`XM`,`NL`,`XB`,`SFZH`,
+                       `JCORG`,`BSRQ`,`YBLY`,`ZJLX`,`SYBM` ,`BLLXJJCCS`,`HZID`,`LXDH`,`YBLX`,`SFJYLH`,`qycj_rwdm`,`qycj_rwmc`,`CYDD`,
+                        `HYFS`,`sjly`,`create_time`,`sz_uptime`,`ssrq`,`cyfzr`,`lxfs`,`data_up_uuid`,`data_up_time`) 
+  select `UID_SS`,`CI_LASTUPDATE`,`CI_LASTUPTIME`,`CI_AUDITTAG`,`DAY`,`DIM_TBDW`,`YBBH`,`CYRQ`,`XM`,`NL`,`XB`,`SFZH`,
+                       `JCORG`,`BSRQ`,`YBLY`,`ZJLX`,`SYBM` ,`BLLXJJCCS`,`HZID`,`LXDH`,`YBLX`,`SFJYLH`,`qycj_rwdm`,`qycj_rwmc`,`CYDD`,
+                        `HYFS`,`sjly`,`create_time`,`sz_uptime`,`ssrq`,`cyfzr`,`lxfs`,`data_up_uuid`,`data_up_time`
+  from ybsj_xxb;
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-31 09:31:36
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对接mysql binlog","level":"1.2.2.2","depth":3,"next":{"title":"快速部署","level":"1.3","depth":1,"path":"deploy/index.md","ref":"deploy/index.md","articles":[{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},{"title":"flink","level":"1.3.3","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.3.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.3.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.3.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]}]},"previous":{"title":"对接kafka，处理json数据","level":"1.2.2.1","depth":3,"path":"bigdata/flink/flink-kafka-json.md","ref":"bigdata/flink/flink-kafka-json.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"bigdata/flink/flink-connector-mysql.md","mtime":"2022-05-31T01:31:36.657Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-31T01:31:50.230Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-click-heart/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

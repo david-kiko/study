@@ -1,0 +1,645 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>flink ha 部署 · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="David Li <david@linktime.cloud>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="flink-web.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../bigdata/">
+            
+                <a href="../../bigdata/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../bigdata/clickhouse/">
+            
+                <a href="../../bigdata/clickhouse/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Kafka引擎 数据导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Kafka引擎 数据重新刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../bigdata/flink/">
+            
+                <a href="../../bigdata/flink/">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../bigdata/flink/flink-kafka-json.html">
+            
+                <a href="../../bigdata/flink/flink-kafka-json.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    对接kafka，处理json数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../bigdata/flink/flink-connector-mysql.html">
+            
+                <a href="../../bigdata/flink/flink-connector-mysql.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    对接mysql binlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../k8s/">
+            
+                <a href="../k8s/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    k8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../k8s/k8s-kubeadm.html">
+            
+                <a href="../k8s/k8s-kubeadm.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    k8s kubeadm安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../clickhouse/">
+            
+                <a href="../clickhouse/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../clickhouse/clickhouse-docker.html">
+            
+                <a href="../clickhouse/clickhouse-docker.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    容器部署clickhouse + tabix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.3.1" data-path="flink-ha-systemd.html">
+            
+                <a href="flink-ha-systemd.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    flink ha 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="flink-web.html">
+            
+                <a href="flink-web.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    flink web 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="flink-metrics.html">
+            
+                <a href="flink-metrics.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    flink metrics部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >flink ha 部署</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="flink-ha-systemd&#x90E8;&#x7F72;">flink ha systemd&#x90E8;&#x7F72;</h1>
+<h2 id="1&#x4E0B;&#x8F7D;&#x89E3;&#x538B;flink&#x5305;">1.&#x4E0B;&#x8F7D;&#x89E3;&#x538B;flink&#x5305;</h2>
+<pre class="language-"><code class="lang-text">wget https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-1.13.2-bin-scala_2.11.tgz
+
+tar -xzvf flink-1.13.2-bin-scala_2.11.tgz
+
+mv flink-1.13.2 /etc/flink
+</code></pre>
+<h2 id="2&#x4E0B;&#x8F7D;connector&#x53CA;hadoop&#x76F8;&#x5173;&#x5305;">2.&#x4E0B;&#x8F7D;connector&#x53CA;hadoop&#x76F8;&#x5173;&#x5305;</h2>
+<pre class="language-"><code class="lang-text">wget -O lib/flink-sql-connector-elasticsearch7_2.11-1.13.2.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-sql-connector-elasticsearch7_2.11-1.13.2.jar
+wget -O lib/flink-sql-connector-mongodb-cdc-2.1.0.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-sql-connector-mongodb-cdc-2.1.0.jar
+wget -O lib/flink-sql-connector-mysql-cdc-2.1.0.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-sql-connector-mysql-cdc-2.1.0.jar
+wget -O lib/flink-sql-connector-oracle-cdc-2.1.1.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-sql-connector-oracle-cdc-2.1.1.jar
+wget -O lib/flink-sql-connector-postgres-cdc-2.1.0.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-sql-connector-postgres-cdc-2.1.0.jar
+wget -O lib/flink-connector-jdbc_2.11-1.13.2.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-connector-jdbc_2.11-1.13.2.jar
+wget -O lib/flink-shaded-hadoop-2-uber-2.7.5-10.0.jar https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/realtime/flink-shaded-hadoop-2-uber-2.7.5-10.0.jar
+</code></pre>
+<h2 id="3&#x914D;&#x7F6E;flink-conf">3.&#x914D;&#x7F6E;flink conf</h2>
+<pre class="language-"><code class="lang-text">security.kerberos.login.use-ticket-cache: false
+security.kerberos.login.keytab: /home/dcos/dcos.keytab
+security.kerberos.login.principal: dcos@LINKTIME.CLOUD
+env.java.opts: -Djava.security.krb5.conf=/etc/krb5.conf
+state.backend: filesystem
+state.checkpoints.dir: hdfs://default/flink/flink-checkpoints
+state.savepoints.dir: hdfs://default/flink/flink-checkpoints
+state.backend.incremental: false
+high-availability: zookeeper
+high-availability.zookeeper.quorum: zk-1.zk:2181,zk-2.zk:2181,zk-3.zk:2181,zk-4.zk:2181,zk-5.zk:2181
+high-availability.storageDir: hdfs://default/flink/ha
+high-availability.zookeeper.path.root: /flink
+high-availability.cluster-id: /flink_cluster
+jobmanager.archive.fs.dir: hdfs://default/flink/completed-jobs/
+historyserver.archive.fs.dir: hdfs://default/flink/completed-jobs/
+classloader.resolve-order: parent-first
+restart-strategy: fixed-delay
+restart-strategy.fixed-delay.delay: 60 s
+cluster.evenly-spread-out-slots: true
+</code></pre>
+<h2 id="4&#x914D;&#x7F6E;hadoop&#x8DEF;&#x5F84;">4.&#x914D;&#x7F6E;hadoop&#x8DEF;&#x5F84;</h2>
+<p>config.sh&#x6587;&#x4EF6;&#x4E2D;&#x6DFB;&#x52A0;export&#x8BED;&#x53E5;</p>
+<pre class="language-"><code class="lang-text">export HADOOP_CONF_DIR=/etc/hadoop/etc/hadoop
+</code></pre>
+<h2 id="5&#x8BBE;&#x7F6E;systemd&#x670D;&#x52A1;">5.&#x8BBE;&#x7F6E;systemd&#x670D;&#x52A1;</h2>
+<p>jobmanager master</p>
+<pre class="language-"><code class="lang-text">cat &gt; /usr/lib/systemd/system/flink-jobmanager.service &lt;&lt; EOF
+[Unit]
+Description=Flink standalone HA mode jobmanager
+
+[Service]
+Type=forking
+User=dcos
+Group=dcos
+Environment=HADOOP_HDFS_HOME=/etc/hadoop
+Environment=HADOOP_COMMON_HOME=/etc/hadoop
+Environment=JAVA_HOME=/opt/mesosphere/active/java/usr/java
+Environment=FLINK_HOME=/etc/flink
+ExecStart=/etc/flink/bin/jobmanager.sh start agent2 18081
+ExecStop=/etc/flink/bin/jobmanager.sh stop
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+<p>taskmanager agent</p>
+<pre class="language-"><code class="lang-text">cat &gt; /usr/lib/systemd/system/flink-taskmanager.service &lt;&lt; EOF
+[Unit]
+Description=Flink standalone HA mode taskmanager
+
+[Service]
+Type=forking
+User=dcos
+Group=dcos
+Environment=HADOOP_HDFS_HOME=/etc/hadoop
+Environment=HADOOP_COMMON_HOME=/etc/hadoop
+Environment=JAVA_HOME=/opt/mesosphere/active/java/usr/java
+Environment=FLINK_HOME=/etc/flink
+ExecStart=/etc/flink/bin/taskmanager.sh start
+ExecStop=/etc/flink/bin/taskmanager.sh stop
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
+EOF
+</code></pre>
+<h2 id="6&#x52A0;&#x8F7D;&#x5E76;&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;">6.&#x52A0;&#x8F7D;&#x5E76;&#x8BBE;&#x7F6E;&#x5F00;&#x673A;&#x542F;&#x52A8;</h2>
+<pre class="language-"><code class="lang-text">systemctl daemon-reload
+systemctl start flink-taskmanager.service
+systemctl enable flink-taskmanager.service
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-31 08:34:48
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"flink ha 部署","level":"1.3.3.1","depth":3,"next":{"title":"flink web 部署","level":"1.3.3.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},"previous":{"title":"flink","level":"1.3.3","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.3.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.3.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.3.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"deploy/flink/flink-ha-systemd.md","mtime":"2022-05-31T00:34:48.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-31T01:31:50.230Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-click-heart/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
