@@ -1,0 +1,671 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>容器部署clickhouse + tabix · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="David Li <david@linktime.cloud>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../flink/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../bigdata/">
+            
+                <a href="../../bigdata/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../bigdata/clickhouse/">
+            
+                <a href="../../bigdata/clickhouse/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Kafka引擎 数据导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Kafka引擎 数据重新刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../bigdata/flink/">
+            
+                <a href="../../bigdata/flink/">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../bigdata/flink/flink-kafka-json.html">
+            
+                <a href="../../bigdata/flink/flink-kafka-json.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    对接kafka，处理json数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../bigdata/flink/flink-connector-mysql.html">
+            
+                <a href="../../bigdata/flink/flink-connector-mysql.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    对接mysql binlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../k8s/">
+            
+                <a href="../k8s/">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    k8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../k8s/k8s-kubeadm.html">
+            
+                <a href="../k8s/k8s-kubeadm.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    k8s kubeadm安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.2.1" data-path="clickhouse-docker.html">
+            
+                <a href="clickhouse-docker.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    容器部署clickhouse + tabix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../flink/">
+            
+                <a href="../flink/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../flink/flink-ha-systemd.html">
+            
+                <a href="../flink/flink-ha-systemd.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    flink ha 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../flink/flink-web.html">
+            
+                <a href="../flink/flink-web.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    flink web 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../flink/flink-metrics.html">
+            
+                <a href="../flink/flink-metrics.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    flink metrics部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >容器部署clickhouse + tabix</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="clickhouse-docker&#x5B89;&#x88C5;">clickhouse docker&#x5B89;&#x88C5;</h1>
+<h2 id="&#x4E00;&#x3001;&#x642D;&#x5EFA;clcikhouse">&#x4E00;&#x3001;&#x642D;&#x5EFA;clcikhouse</h2>
+<h3 id="1docker-composeyml">1.docker-compose.yml</h3>
+<pre class="language-"><code class="lang-text">version: &quot;3.6&quot;
+
+services:
+
+  clickhouse-halobug:
+    container_name: clickhouse-halobug.cn
+    image: yandex/clickhouse-server:latest
+    restart: always
+    ports:
+      - &quot;8123:8123&quot;
+      - &quot;9000:9000&quot;
+      - &quot;9009:9009&quot;
+    networks:
+      - traefik
+    volumes: 
+      # &#x9ED8;&#x8BA4;&#x914D;&#x7F6E; &#x5199;&#x5165;config.d/users.d &#x76EE;&#x5F55;&#x9632;&#x6B62;&#x66F4;&#x65B0;&#x540E;&#x6587;&#x4EF6;&#x4E22;&#x5931;
+      - ./config.xml:/etc/clickhouse-server/config.d/config.xml:rw
+      - ./users.xml:/etc/clickhouse-server/users.xml:rw
+      # &#x8FD0;&#x884C;&#x65E5;&#x5FD7;
+      - ./logs:/var/log/clickhouse-server
+      # &#x6570;&#x636E;&#x6301;&#x4E45;
+      - ./data:/var/lib/clickhouse:rw
+networks:
+  traefik:
+    external: true
+</code></pre>
+<h3 id="2&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x751F;&#x6210;">2.&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x751F;&#x6210;</h3>
+<ul>
+<li>&#x542F;&#x52A8;&#x65F6;&#x5148;&#x4E0D;&#x6302;&#x8F7D;config.xml&#x4EE5;&#x53CA;users.xml</li>
+<li>docker cp &#x5BB9;&#x5668;&#x540D;:/etc/clickhouse-server/config.xml .</li>
+<li>docker cp &#x5BB9;&#x5668;&#x540D;:/etc/clickhouse-server/uses.xml .</li>
+</ul>
+<h3 id="3&#x521B;&#x5EFA;&#x7528;&#x6237;&#x767B;&#x5F55;">3.&#x521B;&#x5EFA;&#x7528;&#x6237;&#x767B;&#x5F55;</h3>
+<p>&#x4FEE;&#x6539;users.xml&#x6587;&#x4EF6;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x6237;</p>
+<pre class="language-"><code class="lang-text">&lt;halobug&gt;
+    &lt;password_sha256_hex&gt;4754fc7e290a9c280d9497b2d76dd854e77f7e1c92476577fdb52ed22afc13e7&lt;/password_sha256_hex&gt;
+    &lt;networks incl=&quot;networks&quot; replace=&quot;replace&quot;&gt;
+        &lt;ip&gt;::/0&lt;/ip&gt;
+    &lt;/networks&gt;
+    &lt;profile&gt;default&lt;/profile&gt;
+    &lt;quota&gt;default&lt;/quota&gt;
+    &lt;allow_databases&gt;
+        // &#x81EA;&#x5B9A;&#x4E49;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x5E93; tutorial &#x4E3A;&#x6D4B;&#x8BD5;&#x5E93;
+       &lt;database&gt;tutorial&lt;/database&gt;
+    &lt;/allow_databases&gt;
+&lt;/halobug&gt;
+</code></pre>
+<p>&#x751F;&#x6210;&#x5BC6;&#x7801;&#xFF08;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#xFF09;</p>
+<pre class="language-"><code class="lang-text">PASSWORD=$(base64 &lt; /dev/urandom | head -c8); echo &quot;$PASSWORD&quot;; echo -n &quot;$PASSWORD&quot; | sha256sum | tr -d &apos;-&apos;
+</code></pre>
+<h3 id="4&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x5BC6;&#x7801;&#xFF0C;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x670D;&#x52A1;">4.&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x5BC6;&#x7801;&#xFF0C;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x670D;&#x52A1;</h3>
+<pre class="language-"><code class="lang-text"># &#x91CD;&#x542F;
+docker-compose down &amp;&amp; docker-compose up -d
+# &#x8FDB;&#x5165;&#x5BB9;&#x5668;
+docker exec -it clickhouse-halobug.cn /bin/bash
+# &#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x540D;&#x5BC6;&#x7801;
+clickhouse-client -u halobug -h 127.0.0.1 --password qjLlan5A
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x642D;&#x5EFA;tabix&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;">&#x4E8C;&#x3001;&#x642D;&#x5EFA;tabix&#x53EF;&#x89C6;&#x5316;&#x64CD;&#x4F5C;</h2>
+<h3 id="1tabix-docker-composeyml">1.tabix docker-compose.yml</h3>
+<pre class="language-"><code class="lang-text"># docker-compose.yml
+version: &quot;3.6&quot;
+
+services:
+
+  clickhouse-halobug:
+    container_name: tabix-halobug.cn
+    image: spoonest/clickhouse-tabix-web-client
+    restart: always
+    expose:
+      - 80
+    networks:
+      - traefik
+    labels:
+      - &quot;traefik.enable=true&quot;
+      - &quot;traefik.docker.network=traefik&quot;
+      - &quot;traefik.http.routers.tabix-test.entrypoints=https&quot;
+      - &quot;traefik.http.routers.tabix-test.rule=Host(`tabix.halobug.cn`)&quot;
+      - &quot;traefik.http.routers.tabix-test.tls=true&quot;
+      - &quot;traefik.http.services.tabix-test-backend.loadbalancer.server.scheme=http&quot;
+      - &quot;traefik.http.services.tabix-test-backend.loadbalancer.server.port=80&quot;
+    logging:
+      driver: &quot;json-file&quot;
+      options:
+        max-size: &quot;1m&quot;
+networks:
+  traefik:
+    external: true
+</code></pre>
+<h3 id="2&#x8BBF;&#x95EE;https127001">2.&#x8BBF;&#x95EE;<a href="https://127.0.0.1" target="_blank">https://127.0.0.1</a></h3>
+<p>&#x4F7F;&#x7528;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684;&#x7528;&#x6237;&#x53CA;&#x5BC6;&#x7801;&#x767B;&#x5F55;</p>
+<h2 id="&#x4E09;&#x3001;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;">&#x4E09;&#x3001;&#x6D4B;&#x8BD5;&#x547D;&#x4EE4;</h2>
+<pre class="language-"><code class="lang-text"># &#x8FDB;&#x5165;&#x5BB9;&#x5668;
+docker exec -it clickhouse-halobug.cn /bin/bash
+
+# &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;
+clickhouse-client --query &quot;CREATE DATABASE IF NOT EXISTS test&quot;
+
+#&#x4F7F;&#x7528;&#x7528;&#x6237;&#x540D;&#x8FDB;&#x5165;
+clickhouse-client -u halobug -h 127.0.0.1 --password qjLlan5A
+
+# &#x521B;&#x5EFA;&#x6D4B;&#x8BD5;&#x8868;
+CREATE TABLE test.test_son
+(
+  `id` Int64,
+  `name` String, 
+  `title` String
+) ENGINE = MergeTree ORDER BY id SETTINGS index_granularity = 8192
+
+# &#x63D2;&#x5165;&#x6570;&#x636E;
+
+INSERT INTO test.test_son VALUES (&apos;1&apos;,&apos;Hello, world&apos;,&apos;&#x6807;&#x9898;&#x6D4B;&#x8BD5;&apos;), (&apos;2&apos;,&apos;Hello, world2&apos;,&apos;&#x6807;&#x9898;&#x6D4B;&#x8BD5;3&apos;)
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x53C2;&#x8003;&#x6587;&#x6863;">&#x56DB;&#x3001;&#x53C2;&#x8003;&#x6587;&#x6863;</h2>
+<p><a href="https://zhuanlan.zhihu.com/p/383817560" target="_blank">https://zhuanlan.zhihu.com/p/383817560</a></p>
+<footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-30 11:05:09
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"next":{"title":"flink","level":"1.3.3","depth":2,"path":"deploy/flink/index.md","ref":"deploy/flink/index.md","articles":[{"title":"flink ha 部署","level":"1.3.3.1","depth":3,"path":"deploy/flink/flink-ha-systemd.md","ref":"deploy/flink/flink-ha-systemd.md","articles":[]},{"title":"flink web 部署","level":"1.3.3.2","depth":3,"path":"deploy/flink/flink-web.md","ref":"deploy/flink/flink-web.md","articles":[]},{"title":"flink metrics部署","level":"1.3.3.3","depth":3,"path":"deploy/flink/flink-metrics.md","ref":"deploy/flink/flink-metrics.md","articles":[]}]},"previous":{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"deploy/clickhouse/clickhouse-docker.md","mtime":"2022-05-30T03:05:09.737Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-31T01:31:50.230Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-click-heart/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

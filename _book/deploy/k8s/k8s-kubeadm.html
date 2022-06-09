@@ -1,0 +1,1330 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>k8s kubeadm安装 · Sample GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="David Li <david@linktime.cloud>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../clickhouse/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../bigdata/">
+            
+                <a href="../../bigdata/">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    大数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../bigdata/clickhouse/">
+            
+                <a href="../../bigdata/clickhouse/">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.1.</b>
+                    
+                    Kafka引擎 数据导入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                <a href="../../bigdata/clickhouse/refresh_kafka_to_clickhouse.html">
+            
+                    
+                        <b>1.2.1.2.</b>
+                    
+                    Kafka引擎 数据重新刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../bigdata/flink/">
+            
+                <a href="../../bigdata/flink/">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../bigdata/flink/flink-kafka-json.html">
+            
+                <a href="../../bigdata/flink/flink-kafka-json.html">
+            
+                    
+                        <b>1.2.2.1.</b>
+                    
+                    对接kafka，处理json数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../bigdata/flink/flink-connector-mysql.html">
+            
+                <a href="../../bigdata/flink/flink-connector-mysql.html">
+            
+                    
+                        <b>1.2.2.2.</b>
+                    
+                    对接mysql binlog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    快速部署
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    k8s
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1.1" data-path="k8s-kubeadm.html">
+            
+                <a href="k8s-kubeadm.html">
+            
+                    
+                        <b>1.3.1.1.</b>
+                    
+                    k8s kubeadm安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../clickhouse/">
+            
+                <a href="../clickhouse/">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    clickhouse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../clickhouse/clickhouse-docker.html">
+            
+                <a href="../clickhouse/clickhouse-docker.html">
+            
+                    
+                        <b>1.3.2.1.</b>
+                    
+                    容器部署clickhouse + tabix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../flink/">
+            
+                <a href="../flink/">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    flink
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../flink/flink-ha-systemd.html">
+            
+                <a href="../flink/flink-ha-systemd.html">
+            
+                    
+                        <b>1.3.3.1.</b>
+                    
+                    flink ha 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../flink/flink-web.html">
+            
+                <a href="../flink/flink-web.html">
+            
+                    
+                        <b>1.3.3.2.</b>
+                    
+                    flink web 部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../flink/flink-metrics.html">
+            
+                <a href="../flink/flink-metrics.html">
+            
+                    
+                        <b>1.3.3.3.</b>
+                    
+                    flink metrics部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >k8s kubeadm安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="k8s-v121&#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#xFF08;kubeadm&#x65B9;&#x5F0F;&#xFF09;">k8s v.1.21&#x96C6;&#x7FA4;&#x5B89;&#x88C5;&#x90E8;&#x7F72;&#x8FC7;&#x7A0B;&#xFF08;kubeadm&#x65B9;&#x5F0F;&#xFF09;</h1>
+<h2 id="&#x4E00;&#x3001;&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x540D;">&#x4E00;&#x3001;&#x8BBE;&#x7F6E;&#x4E3B;&#x673A;&#x540D;</h2>
+<pre class="language-"><code class="lang-text">hostnamectl set-hostname k8s-master
+hostnamectl set-hostname k8s-node01
+hostnamectl set-hostname k8s-node01
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x5347;&#x7EA7;&#x5185;&#x6838;">&#x4E8C;&#x3001;&#x5347;&#x7EA7;&#x5185;&#x6838;</h2>
+<p>1.&#x5B89;&#x88C5;&#x5185;&#x6838;</p>
+<pre class="language-"><code class="lang-text">wget https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/k8s-install/kernel-lt-5.4.114-1.el7.elrepo.x86_64.rpm
+wget https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/k8s-install/kernel-lt-devel-5.4.114-1.el7.elrepo.x86_64.rpm
+yum -y install  kernel-lt-5.4.114-1.el7.elrepo.x86_64.rpm kernel-lt-devel-5.4.114-1.el7.elrepo.x86_64.rpm
+</code></pre>
+<p>2.&#x8C03;&#x6574;&#x9ED8;&#x8BA4;&#x5185;&#x6838;&#x542F;&#x52A8;</p>
+<pre class="language-"><code class="lang-text">grub2-set-default &quot;CentOS Linux (5.4.114-1.el7.elrepo.x86_64) 7 (Core)&quot;
+</code></pre>
+<p>3.&#x68C0;&#x67E5;&#x662F;&#x5426;&#x4FEE;&#x6539;&#x6B63;&#x786E;&#x5E76;&#x91CD;&#x542F;&#x7CFB;&#x7EDF;</p>
+<pre class="language-"><code class="lang-text">grub2-editenv list
+reboot
+</code></pre>
+<h2 id="&#x4E09;&#x3001;&#x5C06;&#x6865;&#x63A5;&#x7684;ipv4&#x6D41;&#x91CF;&#x4F20;&#x9012;&#x5230;iptables&#x7684;&#x94FE;">&#x4E09;&#x3001;&#x5C06;&#x6865;&#x63A5;&#x7684;IPv4&#x6D41;&#x91CF;&#x4F20;&#x9012;&#x5230;iptables&#x7684;&#x94FE;</h2>
+<pre class="language-"><code class="lang-text">modprobe br_netfilter
+cat &gt; /etc/sysctl.d/k8s.conf &lt;&lt; EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+EOF
+sysctl --system
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x5F00;&#x542F;ipvs&#x652F;&#x6301;">&#x56DB;&#x3001;&#x5F00;&#x542F;IPVS&#x652F;&#x6301;</h2>
+<p>&#x521B;&#x5EFA;/etc/sysconfig/modules/ipvs.modules&#x6587;&#x4EF6;&#xFF0C;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">#!/bin/bash
+ipvs_modules=&quot;ip_vs ip_vs_lc ip_vs_wlc ip_vs_rr ip_vs_wrr ip_vs_lblc ip_vs_lblcr ip_vs_dh ip_vs_sh ip_vs_fo ip_vs_nq ip_vs_sed ip_vs_ftp nf_conntrack&quot;
+for kernel_module in ${ipvs_modules}; do
+  /sbin/modinfo -F filename ${kernel_module} &gt; /dev/null 2&gt;&amp;1
+  if [ $? -eq 0 ]; then
+    /sbin/modprobe ${kernel_module}
+  fi
+done
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x4F7F;&#x914D;&#x7F6E;&#x751F;&#x6548;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">chmod 755 /etc/sysconfig/modules/ipvs.modules 
+sh /etc/sysconfig/modules/ipvs.modules
+lsmod | grep ip_vs
+</code></pre>
+<p>&#x4E0B;&#x8F7D;ipvs&#x7BA1;&#x7406;&#x5DE5;&#x5177;</p>
+<pre class="language-"><code class="lang-text">yum install -y ipset ipvsadm
+</code></pre>
+<h2 id="&#x4E94;&#x3001;&#x540C;&#x6B65;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;">&#x4E94;&#x3001;&#x540C;&#x6B65;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x95F4;</h2>
+<pre class="language-"><code class="lang-text">yum install chrony -y
+systemctl enable chronyd --now
+chronyc sources
+</code></pre>
+<h2 id="&#x516D;&#x3001;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#x3001;selinux">&#x516D;&#x3001;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#x3001;selinux</h2>
+<p>1.K8s&#x96C6;&#x7FA4;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x9700;&#x8981;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">systemctl stop firewalld &amp;&amp; systemctl disable firewalld
+setenforce 0
+sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config
+</code></pre>
+<p>2.&#x63A5;&#x7740;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x7684;&#x4EA4;&#x6362;&#x5206;&#x533A;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">swapoff -a
+cp /etc/fstab  /etc/fstab.bak
+cat /etc/fstab.bak | grep -v swap &gt; /etc/fstab
+</code></pre>
+<p>3.&#x7136;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x4FEE;&#x6539;iptables&#x8BBE;&#x7F6E;&#xFF0C;&#x5728;/etc/sysctl.conf&#x4E2D;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">cat &gt;&gt; /etc/sysctl.conf &lt;&lt; EOF
+vm.swappiness = 0
+net.bridge.bridge-nf-call-iptables = 1
+net.ipv4.ip_forward = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
+</code></pre>
+<p>4.&#x6700;&#x540E;&#xFF0C;&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#xFF0C;&#x4EE5;&#x4F7F;&#x8BBE;&#x7F6E;&#x751F;&#x6548;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">sysctl -p
+</code></pre>
+<h2 id="&#x4E03;&#x3001;&#x4E3B;&#x673A;&#x540D;&#x672C;&#x5730;&#x89E3;&#x6790;&#x914D;&#x7F6E;">&#x4E03;&#x3001;&#x4E3B;&#x673A;&#x540D;&#x672C;&#x5730;&#x89E3;&#x6790;&#x914D;&#x7F6E;</h2>
+<p>&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x4EE5;&#x53CA;IP&#x5730;&#x5740;&#x90FD;&#x5728;&#x4E0A;&#x9762;&#x73AF;&#x5883;&#x4ECB;&#x7ECD;&#x4E2D;&#x7ED9;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x6839;&#x636E;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;k8s&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5982;&#x4E0B;&#x4E3B;&#x673A;&#x540D;&#x89E3;&#x6790;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x6DFB;&#x52A0;&#x5230;&#x6BCF;&#x4E2A;&#x96C6;&#x7FA4;&#x8282;&#x70B9;&#x7684;/etc/hosts&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x4E3B;&#x673A;&#x540D;&#x89E3;&#x6790;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">127.0.1.1    i-jg8xmnmc
+192.168.0.21 k8s-master
+192.168.0.22 k8s-node01
+192.168.0.23 k8s-node02
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4F7F;&#x7528;&#x5185;&#x7F51;&#x5730;&#x5740;</p>
+<h2 id="&#x516B;&#x3001;&#x5B89;&#x88C5;docker&#x73AF;&#x5883;&#xFF08;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x6B65;&#x9AA4;&#xFF09;">&#x516B;&#x3001;&#x5B89;&#x88C5;docker&#x73AF;&#x5883;&#xFF08;&#x6240;&#x6709;&#x8282;&#x70B9;&#x90FD;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x6B65;&#x9AA4;&#xFF09;</h2>
+<p>1.&#x5B89;&#x88C5;</p>
+<pre class="language-"><code class="lang-text">yum install -y yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum makecache fast
+yum install docker-ce -y
+systemctl restart docker
+systemctl enable docker
+docker version
+</code></pre>
+<p>2.&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-text">cat &lt;&lt;EOF | tee /etc/docker/daemon.json
+{
+  &quot;exec-opts&quot;: [&quot;native.cgroupdriver=systemd&quot;],
+  &quot;log-driver&quot;: &quot;json-file&quot;,
+  &quot;log-opts&quot;: {
+    &quot;max-size&quot;: &quot;100m&quot;
+  },
+  &quot;storage-driver&quot;: &quot;overlay2&quot;
+}
+EOF
+</code></pre>
+<p>3.&#x91CD;&#x65B0;&#x542F;&#x52A8; Docker &#x5E76;&#x5728;&#x542F;&#x52A8;&#x65F6;&#x542F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">systemctl enable docker
+systemctl daemon-reload
+systemctl restart docker
+</code></pre>
+<h2 id="&#x4E5D;&#x3001;&#x5B89;&#x88C5;containerd">&#x4E5D;&#x3001;&#x5B89;&#x88C5;Containerd</h2>
+<p>1.&#x4E0B;&#x8F7D;&#x5E76;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-text">cd /root/
+yum install libseccomp -y
+
+wget https://linktime-external-project.oss-cn-hangzhou.aliyuncs.com/k8s-install/cri-containerd-cni-1.5.5-linux-amd64.tar.gz
+tar -C / -xzf cri-containerd-cni-1.5.5-linux-amd64.tar.gz
+
+echo &quot;export PATH=$PATH:/usr/local/bin:/usr/local/sbin&quot; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+
+mkdir -p /etc/containerd
+containerd config default &gt; /etc/containerd/config.toml
+
+systemctl enable containerd --now
+ctr version
+</code></pre>
+<p>2.&#x5C06; containerd &#x7684; cgroup driver &#x914D;&#x7F6E;&#x4E3A; systemd</p>
+<pre class="language-"><code class="lang-text">#&#x901A;&#x8FC7;&#x641C;&#x7D22;SystemdCgroup&#x8FDB;&#x884C;&#x5B9A;&#x4F4D;
+vim /etc/containerd/config.toml
+[plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd.runtimes.runc]
+  ...
+  [plugins.&quot;io.containerd.grpc.v1.cri&quot;.containerd.runtimes.runc.options]
+    SystemdCgroup = true
+    ....
+
+#&#x6CE8;&#x610F;&#xFF1A;&#x6700;&#x7EC8;&#x8F93;&#x51FA;shell&#x547D;&#x4EE4;&#xFF1A;
+sed -i &quot;s/SystemdCgroup = false/SystemdCgroup = true/g&quot; /etc/containerd/config.toml
+</code></pre>
+<p>3.&#x914D;&#x7F6E;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;&#x5730;&#x5740;</p>
+<p>&#x7136;&#x540E;&#x518D;&#x4E3A;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x52A0;&#x901F;&#x5668;&#xFF0C;&#x9700;&#x8981;&#x5728; cri &#x914D;&#x7F6E;&#x5757;&#x4E0B;&#x9762;&#x7684; registry &#x914D;&#x7F6E;&#x5757;&#x4E0B;&#x9762;&#x8FDB;&#x884C;&#x914D;&#x7F6E; registry.mirrors&#xFF1A;&#xFF08;&#x6CE8;&#x610F;&#x7F29;&#x8FDB;&#xFF09;
+<img src="https://note.youdao.com/yws/res/1879/25D274F0303847D18822B016B817B8BE" alt="image"></p>
+<pre class="language-"><code class="lang-text">[plugins.&quot;io.containerd.grpc.v1.cri&quot;.registry.mirrors]
+  [plugins.&quot;io.containerd.grpc.v1.cri&quot;.registry.mirrors.&quot;docker.io&quot;]
+    endpoint = [&quot;https://kvuwuws2.mirror.aliyuncs.com&quot;]
+  [plugins.&quot;io.containerd.grpc.v1.cri&quot;.registry.mirrors.&quot;k8s.gcr.io&quot;]
+    endpoint = [&quot;https://registry.aliyuncs.com/k8sxio&quot;]
+</code></pre>
+<p>4.&#x542F;&#x52A8;containerd&#x670D;&#x52A1;</p>
+<pre class="language-"><code class="lang-text">systemctl daemon-reload
+systemctl enable containerd --now
+</code></pre>
+<p>5.&#x9A8C;&#x8BC1;</p>
+<pre class="language-"><code class="lang-text">ctr version
+crictl version
+</code></pre>
+<h2 id="&#x5341;&#x3001;&#x5B89;&#x88C5;kubeadm&#x3001;kubelet&#x3001;kubectl&#x5DE5;&#x5177;">&#x5341;&#x3001;&#x5B89;&#x88C5;Kubeadm&#x3001;kubelet&#x3001;kubectl&#x5DE5;&#x5177;</h2>
+<p>1.&#x5728;&#x786E;&#x4FDD;&#x7CFB;&#x7EDF;&#x57FA;&#x7840;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6765;&#x5B89;&#x88C5; Kubeadm&#x3001;kubelet&#x4E86;&#xFF0C;&#x6211;&#x8FD9;&#x91CC;&#x662F;&#x901A;&#x8FC7;&#x6307;&#x5B9A;yum &#x6E90;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF0C;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x6E90;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">cat &gt; /etc/yum.repos.d/kubernetes.repo &lt;&lt; EOF
+[kubernetes]
+name=Kubernetes
+baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64
+enabled=1
+gpgcheck=0
+repo_gpgcheck=0
+gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
+EOF
+</code></pre>
+<p>2.&#x5B89;&#x88C5; kubeadm&#x3001;kubelet&#x3001;kubectl(all&#x8282;&#x70B9;&#x5747;&#x8981;&#x914D;&#x7F6E;)&#x3002;</p>
+<pre class="language-"><code class="lang-text">yum makecache fast
+yum install -y kubelet-1.22.2 kubeadm-1.22.2 kubectl-1.22.2 --disableexcludes=kubernetes
+kubeadm version
+
+systemctl enable --now kubelet
+kubeadm version
+</code></pre>
+<h2 id="&#x5341;&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;master&#x8282;&#x70B9;&#x64CD;&#x4F5C;">&#x5341;&#x4E00;&#x3001;&#x521D;&#x59CB;&#x5316;&#x96C6;&#x7FA4;(master&#x8282;&#x70B9;&#x64CD;&#x4F5C;)</h2>
+<p>1.&#x6267;&#x884C;&#x5982;&#x4E0B;&#x547D;&#x4EE4;:</p>
+<pre class="language-"><code class="lang-text">kubeadm config print init-defaults
+kubeadm config images list
+kubeadm config images list --kubernetes-version=v1.21.0 --image-repository swr.myhuaweicloud.com/iivey
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF1A;
+&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7528;&#x6765;&#x67E5;&#x770B;&#x5B89;&#x88C5;k8s&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x5B89;&#x88C5;&#x6E90;&#x548C;&#x7248;&#x672C;&#x3002;
+&#x7B2C;&#x4E8C;&#x6761;&#x547D;&#x4EE4;&#x662F;&#x67E5;&#x8BE2;&#x9700;&#x8981;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x4ECE;&#x8F93;&#x51FA;&#x53EF;&#x5728;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x4ECE;k8s.gcr.io&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;&#xFF0C;&#x6B64;&#x5730;&#x5740;&#x56FD;&#x5185;&#x65E0;&#x6CD5;&#x8BBF;&#x95EE;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;&#x7684;&#x5730;&#x5740;&#x3002;
+&#x7B2C;&#x4E09;&#x6761;&#x547D;&#x4EE4;&#x662F;&#x8BBE;&#x7F6E;k8s&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x4E3A;&#x534E;&#x4E3A;&#x4E91;&#x955C;&#x50CF;&#x7AD9;&#x5730;&#x5740;&#xFF0C;&#x67E5;&#x770B;&#x4E00;&#x4E0B;&#x9700;&#x8981;&#x4E0B;&#x8F7D;&#x7684;&#x955C;&#x50CF;&#x90FD;&#x6709;&#x54EA;&#x4E9B;&#x3002;</p>
+<p>2.&#x63A5;&#x7740;&#xFF0C;&#x5728; master &#x8282;&#x70B9;&#x914D;&#x7F6E; kubeadm &#x521D;&#x59CB;&#x5316;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x5BFC;&#x51FA;&#x9ED8;&#x8BA4;&#x7684;&#x521D;&#x59CB;&#x5316;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">kubeadm config print init-defaults --component-configs KubeletConfiguration &gt; kubeadm.yaml
+</code></pre>
+<p>3.&#x7136;&#x540E;&#x6839;&#x636E;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x9700;&#x6C42;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#xFF0C;&#x6BD4;&#x5982;&#x4FEE;&#x6539; imageRepository &#x6307;&#x5B9A;&#x96C6;&#x7FA4;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x62C9;&#x53D6; Kubernetes &#x6240;&#x9700;&#x955C;&#x50CF;&#x7684;&#x5730;&#x5740;&#xFF0C;kube-proxy &#x7684;&#x6A21;&#x5F0F;&#x4E3A; ipvs&#xFF0C;&#x53E6;&#x5916;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x662F;&#x51C6;&#x5907;&#x5B89;&#x88C5; flannel &#x7F51;&#x7EDC;&#x63D2;&#x4EF6;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5C06; networking.podSubnet &#x8BBE;&#x7F6E;&#x4E3A;10.244.0.0/16&#x3002;</p>
+<pre class="language-"><code class="lang-text">apiVersion: kubeadm.k8s.io/v1beta3
+bootstrapTokens:
+- groups:
+  - system:bootstrappers:kubeadm:default-node-token
+  token: abcdef.0123456789abcdef
+  ttl: 24h0m0s
+  usages:
+  - signing
+  - authentication
+kind: InitConfiguration
+localAPIEndpoint:
+  advertiseAddress: 192.168.0.21  # &#x4FEE;&#x6539;1&#xFF1A;&#x6307;&#x5B9A;master&#x8282;&#x70B9;&#x5185;&#x7F51;IP
+  bindPort: 6443
+nodeRegistration:
+  criSocket: /run/containerd/containerd.sock  # &#x4FEE;&#x6539;2&#xFF1A;&#x4F7F;&#x7528; containerd&#x7684;Unix socket &#x5730;&#x5740;
+  imagePullPolicy: IfNotPresent
+  name: k8s-master01 #name #&#x4FEE;&#x6539;3&#xFF1A;&#x4FEE;&#x6539;master&#x8282;&#x70B9;&#x540D;&#x79F0;
+  taints:  # &#x4FEE;&#x6539;4&#xFF1A;&#x7ED9;master&#x6DFB;&#x52A0;&#x6C61;&#x70B9;&#xFF0C;master&#x8282;&#x70B9;&#x4E0D;&#x80FD;&#x8C03;&#x5EA6;&#x5E94;&#x7528;
+  - effect: &quot;NoSchedule&quot;
+    key: &quot;node-role.kubernetes.io/master&quot;
+
+---
+apiVersion: kubeproxy.config.k8s.io/v1alpha1
+kind: KubeProxyConfiguration
+mode: ipvs  # &#x4FEE;&#x6539;5&#xFF1A;&#x4FEE;&#x6539;kube-proxy &#x6A21;&#x5F0F;&#x4E3A;ipvs&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;iptables
+
+---
+apiServer:
+  timeoutForControlPlane: 4m0s
+apiVersion: kubeadm.k8s.io/v1beta3
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controllerManager: {}
+dns: {}
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: registry.aliyuncs.com/k8sxio #&#x4FEE;&#x6539;6&#xFF1A;image&#x5730;&#x5740;
+kind: ClusterConfiguration
+kubernetesVersion: 1.22.2 #&#x4FEE;&#x6539;7&#xFF1A;&#x6307;&#x5B9A;k8s&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x8FD9;&#x91CC;&#x5FFD;&#x7565;&#x4E86;&#x5C0F;&#x7248;&#x672C;&#x53F7;
+networking:
+  dnsDomain: cluster.local
+  serviceSubnet: 10.96.0.0/12
+  podSubnet: 10.244.0.0/16  # &#x4FEE;&#x6539;8&#xFF1A;&#x6307;&#x5B9A; pod &#x5B50;&#x7F51;
+scheduler: {}
+
+---
+apiVersion: kubelet.config.k8s.io/v1beta1
+authentication:
+  anonymous:
+    enabled: false
+  webhook:
+    cacheTTL: 0s
+    enabled: true
+  x509:
+    clientCAFile: /etc/kubernetes/pki/ca.crt
+authorization:
+  mode: Webhook
+  webhook:
+    cacheAuthorizedTTL: 0s
+    cacheUnauthorizedTTL: 0s
+clusterDNS:
+- 10.96.0.10
+clusterDomain: cluster.local
+cpuManagerReconcilePeriod: 0s
+evictionPressureTransitionPeriod: 0s
+fileCheckFrequency: 0s
+healthzBindAddress: 127.0.0.1
+healthzPort: 10248
+httpCheckFrequency: 0s
+imageMinimumGCAge: 0s
+kind: KubeletConfiguration
+cgroupDriver: systemd  # &#x4FEE;&#x6539;9&#xFF1A;&#x914D;&#x7F6E; cgroup driver
+logging: {}
+memorySwap: {}
+nodeStatusReportFrequency: 0s
+nodeStatusUpdateFrequency: 0s
+rotateCertificates: true
+runtimeRequestTimeout: 0s
+shutdownGracePeriod: 0s
+shutdownGracePeriodCriticalPods: 0s
+staticPodPath: /etc/kubernetes/manifests
+streamingConnectionIdleTimeout: 0s
+syncFrequency: 0s
+volumeStatsAggPeriod: 0s
+</code></pre>
+<p>4.&#x63D0;&#x524D;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;</p>
+<pre class="language-"><code class="lang-text">kubeadm config images list
+kubeadm config images list --config kubeadm.yaml
+kubeadm config images pull --config kubeadm.yaml
+</code></pre>
+<p>5.&#x4E0A;&#x9762;&#x5728;&#x62C9;&#x53D6; coredns &#x955C;&#x50CF;&#x7684;&#x65F6;&#x5019;&#x51FA;&#x9519;&#x4E86;&#xFF0C;&#x963F;&#x91CC;&#x4E91;&#x4ED3;&#x5E93;&#x91CC;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5230;&#x5B98;&#x65B9;&#x4ED3;&#x5E93; pull &#x8BE5;&#x955C;&#x50CF;&#xFF0C;&#x7136;&#x540E;&#x91CD;&#x65B0; tag &#x4E0B;&#x955C;&#x50CF;&#x5730;&#x5740;&#x5373;&#x53EF;</p>
+<pre class="language-"><code class="lang-text">ctr -n k8s.io i pull docker.io/coredns/coredns:1.8.4
+
+ctr -n k8s.io i tag docker.io/coredns/coredns:1.8.4 registry.aliyuncs.com/k8sxio/coredns:v1.8.4
+</code></pre>
+<p>6.pause&#x955C;&#x50CF;&#x4F1A;&#x4F7F;&#x7528;k8s.gcr.io&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#xFF0C;&#x63D0;&#x524D;&#x6253;&#x4E0A;tag</p>
+<pre class="language-"><code class="lang-text">ctr -n k8s.io i tag registry.aliyuncs.com/k8sxio/pause:3.5 k8s.gcr.io/pause:3.5
+ctr -n k8s.io i ls -q
+</code></pre>
+<p>&#x6216;&#x8005;&#x4FEE;&#x6539;/etc/containerd/config.toml&#x6587;&#x4EF6;&#xFF0C;sandbox_image&#x5B57;&#x6BB5;</p>
+<p>7.&#x521D;&#x59CB;&#x5316;master&#x8282;&#x70B9;</p>
+<pre class="language-"><code class="lang-text">kubeadm init --config kubeadm.yaml
+</code></pre>
+<p>8.&#x6839;&#x636E;&#x5B89;&#x88C5;&#x63D0;&#x793A;&#x62F7;&#x8D1D; kubeconfig &#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-text">mkdir -p $HOME/.kube
+cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+chown $(id -u):$(id -g) $HOME/.kube/config
+</code></pre>
+<p>9.&#x67E5;&#x770B;&#x5B89;&#x88C5;&#x6548;&#x679C;</p>
+<pre class="language-"><code class="lang-text">kubectl get node
+</code></pre>
+<h2 id="&#x5341;&#x4E8C;&#x3001;&#x6DFB;&#x52A0;&#x8282;&#x70B9;">&#x5341;&#x4E8C;&#x3001;&#x6DFB;&#x52A0;&#x8282;&#x70B9;</h2>
+<pre class="language-"><code class="lang-text">kubeadm join 192.168.0.21:6443 --token abcdef.0123456789abcdef \
+--discovery-token-ca-cert-hash sha256:ad45d9d60ddab962d72c054de05f41e130b4cf42a75d8e97e96b63331cf9fbf1
+</code></pre>
+<p>join &#x547D;&#x4EE4;&#xFF1A;&#x5982;&#x679C;&#x5FD8;&#x8BB0;&#x4E86;&#x4E0A;&#x9762;&#x7684; join &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4; kubeadm token create --print-join-command &#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x3002;</p>
+<h2 id="&#x5341;&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;flannel">&#x5341;&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;flannel</h2>
+<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5176;&#x5B9E;&#x96C6;&#x7FA4;&#x8FD8;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD8;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5B89;&#x88C5;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6587;&#x6863; <a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/" target="_blank">https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/</a> &#x4E2D;&#x9009;&#x62E9;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7EDC;&#x63D2;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5B89;&#x88C5; flannel:</p>
+<pre class="language-"><code class="lang-text">wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x597D;&#xFF0C;&#x76F4;&#x63A5;apply:</p>
+<pre class="language-"><code class="lang-text">kubectl apply -f kube-flannel.yml
+</code></pre>
+<p>&#x9694;&#x4E00;&#x4F1A;&#x513F;&#x67E5;&#x770B; Pod &#x8FD0;&#x884C;&#x72B6;&#x6001;:</p>
+<pre class="language-"><code class="lang-text">kubectl get pod -nkube-system -owide
+</code></pre>
+<h2 id="&#x5341;&#x56DB;&#x3001;dashboard">&#x5341;&#x56DB;&#x3001;Dashboard</h2>
+<p>1.&#x4E0B;&#x8F7D;kube-dashboard&#x7684;yaml&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-text">wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.3.1/aio/deploy/recommended.yaml
+</code></pre>
+<p>2.&#x6587;&#x4EF6;&#x5185;&#x5BB9;</p>
+<pre class="language-"><code class="lang-text"># Copyright 2017 The Kubernetes Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubernetes-dashboard
+
+---
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  ports:
+    - port: 443
+      targetPort: 8443
+  selector:
+    k8s-app: kubernetes-dashboard
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-certs
+  namespace: kubernetes-dashboard
+type: Opaque
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-csrf
+  namespace: kubernetes-dashboard
+type: Opaque
+data:
+  csrf: &quot;&quot;
+
+---
+
+apiVersion: v1
+kind: Secret
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-key-holder
+  namespace: kubernetes-dashboard
+type: Opaque
+
+---
+
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard-settings
+  namespace: kubernetes-dashboard
+
+---
+
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+rules:
+  # Allow Dashboard to get, update and delete Dashboard exclusive secrets.
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;secrets&quot;]
+    resourceNames: [&quot;kubernetes-dashboard-key-holder&quot;, &quot;kubernetes-dashboard-certs&quot;, &quot;kubernetes-dashboard-csrf&quot;]
+    verbs: [&quot;get&quot;, &quot;update&quot;, &quot;delete&quot;]
+    # Allow Dashboard to get and update &apos;kubernetes-dashboard-settings&apos; config map.
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;configmaps&quot;]
+    resourceNames: [&quot;kubernetes-dashboard-settings&quot;]
+    verbs: [&quot;get&quot;, &quot;update&quot;]
+    # Allow Dashboard to get metrics.
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;services&quot;]
+    resourceNames: [&quot;heapster&quot;, &quot;dashboard-metrics-scraper&quot;]
+    verbs: [&quot;proxy&quot;]
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;services/proxy&quot;]
+    resourceNames: [&quot;heapster&quot;, &quot;http:heapster:&quot;, &quot;https:heapster:&quot;, &quot;dashboard-metrics-scraper&quot;, &quot;http:dashboard-metrics-scraper&quot;]
+    verbs: [&quot;get&quot;]
+
+---
+
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+rules:
+  # Allow Metrics Scraper to get metrics from the Metrics server
+  - apiGroups: [&quot;metrics.k8s.io&quot;]
+    resources: [&quot;pods&quot;, &quot;nodes&quot;]
+    verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;]
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: kubernetes-dashboard
+subjects:
+  - kind: ServiceAccount
+    name: kubernetes-dashboard
+    namespace: kubernetes-dashboard
+
+---
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kubernetes-dashboard
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kubernetes-dashboard
+subjects:
+  - kind: ServiceAccount
+    name: kubernetes-dashboard
+    namespace: kubernetes-dashboard
+
+---
+
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard
+  template:
+    metadata:
+      labels:
+        k8s-app: kubernetes-dashboard
+    spec:
+      containers:
+        - name: kubernetes-dashboard
+          image: kubernetesui/dashboard:v2.3.1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8443
+              protocol: TCP
+          args:
+            - --auto-generate-certificates
+            - --namespace=kubernetes-dashboard
+            # Uncomment the following line to manually specify Kubernetes API server Host
+            # If not specified, Dashboard will attempt to auto discover the API server and connect
+            # to it. Uncomment only if the default does not work.
+            # - --apiserver-host=http://my-address:port
+          volumeMounts:
+            - name: kubernetes-dashboard-certs
+              mountPath: /certs
+              # Create on-disk volume to store exec logs
+            - mountPath: /tmp
+              name: tmp-volume
+          livenessProbe:
+            httpGet:
+              scheme: HTTPS
+              path: /
+              port: 8443
+            initialDelaySeconds: 30
+            timeoutSeconds: 30
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsUser: 1001
+            runAsGroup: 2001
+      volumes:
+        - name: kubernetes-dashboard-certs
+          secret:
+            secretName: kubernetes-dashboard-certs
+        - name: tmp-volume
+          emptyDir: {}
+      serviceAccountName: kubernetes-dashboard
+      nodeSelector:
+        &quot;kubernetes.io/os&quot;: linux
+      # Comment the following tolerations if Dashboard must not be deployed on master
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: dashboard-metrics-scraper
+  name: dashboard-metrics-scraper
+  namespace: kubernetes-dashboard
+spec:
+  ports:
+    - port: 8000
+      targetPort: 8000
+  selector:
+    k8s-app: dashboard-metrics-scraper
+
+---
+
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  labels:
+    k8s-app: dashboard-metrics-scraper
+  name: dashboard-metrics-scraper
+  namespace: kubernetes-dashboard
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      k8s-app: dashboard-metrics-scraper
+  template:
+    metadata:
+      labels:
+        k8s-app: dashboard-metrics-scraper
+      annotations:
+        seccomp.security.alpha.kubernetes.io/pod: &apos;runtime/default&apos;
+    spec:
+      containers:
+        - name: dashboard-metrics-scraper
+          image: kubernetesui/metrics-scraper:v1.0.6
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /
+              port: 8000
+            initialDelaySeconds: 30
+            timeoutSeconds: 30
+          volumeMounts:
+          - mountPath: /tmp
+            name: tmp-volume
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsUser: 1001
+            runAsGroup: 2001
+      serviceAccountName: kubernetes-dashboard
+      nodeSelector:
+        &quot;kubernetes.io/os&quot;: linux
+      # Comment the following tolerations if Dashboard must not be deployed on master
+      tolerations:
+        - key: node-role.kubernetes.io/master
+          effect: NoSchedule
+      volumes:
+        - name: tmp-volume
+          emptyDir: {}
+</code></pre>
+<p>3.&#x4FEE;&#x6539;kube-dashboard.yaml&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-text"># &#x4FEE;&#x6539;Service&#x4E3A;NodePort&#x7C7B;&#x578B;
+......
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace: kubernetes-dashboard
+spec:
+  ports:
+    - port: 443
+      targetPort: 8443
+  selector:
+    k8s-app: kubernetes-dashboard
+  type: NodePort  # &#x52A0;&#x4E0A;type=NodePort&#x53D8;&#x6210;NodePort&#x7C7B;&#x578B;&#x7684;&#x670D;&#x52A1;
+......
+</code></pre>
+<p>4.&#x90E8;&#x7F72;kube-dashboard.yaml&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-text">mv recommended.yaml kube-dashboard.yaml
+kubectl apply -f kube-dashboard.yaml
+</code></pre>
+<h2 id="&#x5341;&#x4E94;&#x3001;&#x914D;&#x7F6E;cni">&#x5341;&#x4E94;&#x3001;&#x914D;&#x7F6E;cni</h2>
+<p>&#x6211;&#x4EEC;&#x4ED4;&#x7EC6;&#x770B;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x4E0A;&#x9762;&#x7684; Pod &#x5206;&#x914D;&#x7684; IP &#x6BB5;&#x662F; 10.88.xx.xx&#xFF0C;&#x5305;&#x62EC;&#x524D;&#x9762;&#x81EA;&#x52A8;&#x5B89;&#x88C5;&#x7684; CoreDNS &#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x4E0D;&#x662F;&#x914D;&#x7F6E;&#x7684; podSubnet &#x4E3A; 10.244.0.0/16 &#x5417;&#xFF1F;</p>
+<pre class="language-"><code class="lang-text">kubectl get pod -A -owide
+</code></pre>
+<p><img src="https://note.youdao.com/yws/res/1947/081E9056DBCC4BE588E6ED1CF17D3C6C" alt="image"></p>
+<p>&#x6211;&#x4EEC;&#x5148;&#x53BB;&#x67E5;&#x770B;&#x4E0B; CNI &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<pre class="language-"><code class="lang-text">ll /etc/cni/net.d/
+</code></pre>
+<p><img src="https://note.youdao.com/yws/res/1952/61CE65A8EC1A4B128516732CDA5409E4" alt="image"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;&#x4E00;&#x4E2A;&#x662F; 10-containerd-net.conflist&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x662F;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x521B;&#x5EFA;&#x7684; Flannel &#x7F51;&#x7EDC;&#x63D2;&#x4EF6;&#x751F;&#x6210;&#x7684;&#x914D;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x9700;&#x6C42;&#x80AF;&#x5B9A;&#x662F;&#x60F3;&#x4F7F;&#x7528; Flannel &#x7684;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E0B; containerd &#x8FD9;&#x4E2A;&#x81EA;&#x5E26;&#x7684; cni &#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">cat /etc/cni/net.d/10-containerd-net.conflist
+{
+  &quot;cniVersion&quot;: &quot;0.4.0&quot;,
+  &quot;name&quot;: &quot;containerd-net&quot;,
+  &quot;plugins&quot;: [
+    {
+      &quot;type&quot;: &quot;bridge&quot;,
+      &quot;bridge&quot;: &quot;cni0&quot;,
+      &quot;isGateway&quot;: true,
+      &quot;ipMasq&quot;: true,
+      &quot;promiscMode&quot;: true,
+      &quot;ipam&quot;: {
+        &quot;type&quot;: &quot;host-local&quot;,
+        &quot;ranges&quot;: [
+          [{
+            &quot;subnet&quot;: &quot;10.88.0.0/16&quot;
+          }],
+          [{
+            &quot;subnet&quot;: &quot;2001:4860:4860::/64&quot;
+          }]
+        ],
+        &quot;routes&quot;: [
+          { &quot;dst&quot;: &quot;0.0.0.0/0&quot; },
+          { &quot;dst&quot;: &quot;::/0&quot; }
+        ]
+      }
+    },
+    {
+      &quot;type&quot;: &quot;portmap&quot;,
+      &quot;capabilities&quot;: {&quot;portMappings&quot;: true}
+    }
+  ]
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0A;&#x9762;&#x7684; IP &#x6BB5;&#x6070;&#x597D;&#x5C31;&#x662F; 10.88.0.0/16&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A; cni &#x63D2;&#x4EF6;&#x7C7B;&#x578B;&#x662F; bridge &#x7F51;&#x7EDC;&#xFF0C;&#x7F51;&#x6865;&#x7684;&#x540D;&#x79F0;&#x4E3A; cni0&#xFF1A;
+<img src="https://note.youdao.com/yws/res/1958/0FEE0A4A3FCB4232A8150D53AB141CE3" alt="image"></p>
+<p>&#x4F46;&#x662F;&#x4F7F;&#x7528; bridge &#x7F51;&#x7EDC;&#x7684;&#x5BB9;&#x5668;&#x65E0;&#x6CD5;&#x8DE8;&#x591A;&#x4E2A;&#x5BBF;&#x4E3B;&#x673A;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#xFF0C;&#x8DE8;&#x4E3B;&#x673A;&#x901A;&#x4FE1;&#x9700;&#x8981;&#x501F;&#x52A9;&#x5176;&#x4ED6;&#x7684; cni &#x63D2;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x6211;&#x4EEC;&#x5B89;&#x88C5;&#x7684; Flannel&#xFF0C;&#x6216;&#x8005; Calico &#x7B49;&#x7B49;&#xFF0C;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6709;&#x4E24;&#x4E2A; cni &#x914D;&#x7F6E;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06; 10-containerd-net.conflist &#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x5220;&#x9664;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E2D;&#x6709;&#x591A;&#x4E2A; cni &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;kubelet &#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x6309;&#x6587;&#x4EF6;&#x540D;&#x7684;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F5C;&#x4E3A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x524D;&#x9762;&#x9ED8;&#x8BA4;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x7684;&#x662F; containerd-net &#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x3002;</p>
+<pre class="language-"><code class="lang-text">mv /etc/cni/net.d/10-containerd-net.conflist{,.bak}
+ifconfig  cni0 down &amp;&amp; ip link delete cni0
+systemctl daemon-reload
+systemctl restart containerd kubelet
+</code></pre>
+<p>&#x7136;&#x540E;&#x8BB0;&#x5F97;&#x91CD;&#x5EFA; coredns &#x548C; dashboard &#x7684; Pod&#xFF0C;&#x91CD;&#x5EFA;&#x540E; Pod &#x7684; IP &#x5730;&#x5740;&#x5C31;&#x6B63;&#x5E38;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">kubectl delete pod
+</code></pre>
+<h2 id="&#x5341;&#x516D;&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x5168;&#x5C40;&#x6240;&#x6709;&#x6743;&#x9650;&#x7684;&#x7528;&#x6237;&#x6765;&#x767B;&#x5F55;-dashboard&#xFF1A;adminyaml">&#x5341;&#x516D;&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x5168;&#x5C40;&#x6240;&#x6709;&#x6743;&#x9650;&#x7684;&#x7528;&#x6237;&#x6765;&#x767B;&#x5F55; Dashboard&#xFF1A;(admin.yaml)</h2>
+<pre class="language-"><code class="lang-text">vim admin.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: admin
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: admin
+  namespace: kubernetes-dashboard
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin
+  namespace: kubernetes-dashboard
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x521B;&#x5EFA;</p>
+<pre class="language-"><code class="lang-text">kubectl apply -f admin.yaml
+</code></pre>
+<pre class="language-"><code class="lang-text">kubectl get secret admin-token-xxxxx -o jsonpath={.data.token} -n kubernetes-dashboard |base64 -d
+</code></pre>
+<p><img src="https://note.youdao.com/yws/res/1977/5447B3E422DD40D9BC9D8CD8D6563C5C" alt="image">
+&#x7136;&#x540E;&#x7528;&#x4E0A;&#x9762;&#x7684; base64 &#x89E3;&#x7801;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A; token &#x767B;&#x5F55; Dashboard &#x5373;&#x53EF;</p>
+<p><img src="https://note.youdao.com/yws/res/1979/6CFA93809F294447BDFFC90CA79CEE64" alt="image"></p>
+<h2 id="&#x5341;&#x4E03;&#x3001;&#x4FEE;&#x6539;node&#x8282;&#x70B9;container-runtime">&#x5341;&#x4E03;&#x3001;&#x4FEE;&#x6539;node&#x8282;&#x70B9;container-runtime</h2>
+<p>&#x6267;&#x884C;kubectl get nodes -o wide&#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x7684;node01,node02&#x8FD8;&#x662F;&#x4F7F;&#x7528;docker&#x4F5C;&#x4E3A;&#x8FD0;&#x884C;&#x65F6;&#x5BB9;&#x5668;
+<img src="https://note.youdao.com/yws/res/1989/24D83400FB13489790817ECE85501A94" alt="image"></p>
+<p>1.&#x7EF4;&#x62A4;&#x8282;&#x70B9;
+&#x9996;&#x5148;&#x5C06;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7684;&#x8282;&#x70B9;&#x8BBE;&#x7F6E;&#x6210;&#x4E0D;&#x53EF;&#x8C03;&#x5EA6;</p>
+<pre class="language-"><code class="lang-text">kubectl cordon k8s-node02
+kubectl get nodes -o wide
+</code></pre>
+<p>&#x9A71;&#x9010;&#x8BE5;&#x8282;&#x70B9;&#x4E0A;&#x9664;&#x4E86;daemonset&#x7684;pod</p>
+<pre class="language-"><code class="lang-text">kubectl drain k8s-node02 --ignore-daemonsets
+</code></pre>
+<p>2.&#x5207;&#x6362;Runtime
+&#x5173;&#x95ED;docker&#x3001;containerd &#x548C; kubelet&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">systemctl stop kubelet
+systemctl stop docker
+systemctl stop containerd
+</code></pre>
+<p>3.&#x5B89;&#x88C5;containerd
+&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;docker-ce&#x4F5C;&#x4E3A;&#x96C6;&#x7FA4;runtime&#x65F6;&#x9ED8;&#x8BA4;&#x5B89;&#x88C5;&#x4E86;containerd&#xFF0C;&#x5148;&#x5C06;&#x5176;&#x5378;&#x8F7D;&#x3002;</p>
+<pre class="language-"><code class="lang-text">yum remove docker-ce docker-ce-cli containerd.io
+</code></pre>
+<p>&#x5B89;&#x88C5;containerd&#x53EF;&#x53C2;&#x8003;&#x4E0A;&#x9762;&#x64CD;&#x4F5C;</p>
+<p>/etc/containerd/config.toml &#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684; pause &#x955C;&#x50CF;&#x4E3A;&#x56FD;&#x5185;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x66FF;&#x6362; [plugins.&quot;io.containerd.grpc.v1.cri&quot;] &#x4E0B;&#x9762;&#x7684; sandbox_image</p>
+<p>&#x914D;&#x7F6E;&#x4E0B;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x7684;&#x52A0;&#x901F;&#x5668;&#x5730;&#x5740;</p>
+<p>4.&#x914D;&#x7F6E;kubelet
+&#x4FEE;&#x6539; kubelet &#x914D;&#x7F6E;&#xFF0C;&#x5C06;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x914D;&#x7F6E;&#x4E3A; containerd&#xFF0C;&#x7F16;&#x8F91;/etc/sysconfig/kubelet &#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;kubelet &#x542F;&#x52A8;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-text">KUBELET_EXTRA_ARGS=&quot;--container-runtime=remote --container-runtime-endpoint=unix:///run/containerd/containerd.sock&quot;
+</code></pre>
+<p>--container-runtime &#xFF1A;&#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x7684;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#xFF0C;&#x53EF;&#x9009;&#x503C;&#x4E3A; docker &#x6216;&#x8005; remote&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; docker&#xFF0C;&#x9664; docker &#x4E4B;&#x5916;&#x7684;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x90FD;&#x5E94;&#x8BE5;&#x6307;&#x5B9A;&#x4E3A; remote&#x3002;
+--container-runtime-endpoint&#xFF1A;&#x662F;&#x7528;&#x6765;&#x6307;&#x5B9A;&#x8FDC;&#x7A0B;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x670D;&#x52A1;&#x7684; endpiont &#x5730;&#x5740;&#x7684;&#xFF0C;&#x5728; Linux &#x7CFB;&#x7EDF;&#x4E2D;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x4F7F;&#x7528; unix &#x5957;&#x63A5;&#x5B57;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;unix:///run/containerd/containerd.sock&#x3002;
+--image-service-endpoint&#xFF1A;&#x6307;&#x5B9A;&#x8FDC;&#x7A0B; CRI &#x7684;&#x955C;&#x50CF;&#x670D;&#x52A1;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5219;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; --container-runtime-endpoint &#x7684;&#x503C;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A; CRI &#x90FD;&#x4F1A;&#x5B9E;&#x73B0;&#x5BB9;&#x5668;&#x548C;&#x955C;&#x50CF;&#x670D;&#x52A1;&#x7684;&#x3002;</p>
+<p>5.&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#x91CD;&#x542F; containerd &#x548C; kubelet &#x5373;&#x53EF;</p>
+<pre class="language-"><code class="lang-text">systemctl daemon-reload
+systemctl restart containerd
+systemctl restart kubelet
+</code></pre>
+<p>6.&#x67E5;&#x770B;&#x670D;&#x52A1;</p>
+<pre class="language-"><code class="lang-text">crictl -v
+kubectl get nodes -o wide
+</code></pre>
+<p>7.&#x8FD0;&#x884C;&#x8C03;&#x5EA6;</p>
+<pre class="language-"><code class="lang-text">kubectl uncordon k8s-node02
+</code></pre>
+<h2 id="&#x5341;&#x516B;&#x3001;&#x53C2;&#x8003;&#x5730;&#x5740;">&#x5341;&#x516B;&#x3001;&#x53C2;&#x8003;&#x5730;&#x5740;</h2>
+<p><a href="https://mdnice.com/writing/3e3ec25bfa464049ae173c31a6d98cf8" target="_blank">https://mdnice.com/writing/3e3ec25bfa464049ae173c31a6d98cf8</a></p>
+<p><a href="https://www.jianshu.com/p/5f1630f3bd63" target="_blank">https://www.jianshu.com/p/5f1630f3bd63</a> </p>
+<footer class="page-footer"><span class="copyright">&#xA9; david all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-05-30 10:20:07
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"next":{"title":"clickhouse","level":"1.3.2","depth":2,"path":"deploy/clickhouse/index.md","ref":"deploy/clickhouse/index.md","articles":[{"title":"容器部署clickhouse + tabix","level":"1.3.2.1","depth":3,"path":"deploy/clickhouse/clickhouse-docker.md","ref":"deploy/clickhouse/clickhouse-docker.md","articles":[]}]},"previous":{"title":"k8s","level":"1.3.1","depth":2,"path":"deploy/k8s/index.md","ref":"deploy/k8s/index.md","articles":[{"title":"k8s kubeadm安装","level":"1.3.1.1","depth":3,"path":"deploy/k8s/k8s-kubeadm.md","ref":"deploy/k8s/k8s-kubeadm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","-lunr","-search","search-plus","theme-comscore","theme-api","expandable-chapters","splitter","back-to-top-button","edit-link","prism","-highlight","copy-code-button","-sharing","pageview-count","click-heart","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy david","modify_label":"文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{},"click-heart":{},"livereload":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-api":{"languages":[],"split":true,"theme":"dark"},"back-to-top-button":{},"pageview-count":{},"copy-code-button":{},"edit-link":{"label":"编辑此页面","base":"https://github.com/david-kiko/study/edit/main/-"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"David Li <david@linktime.cloud>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"deploy/k8s/k8s-kubeadm.md","mtime":"2022-05-30T02:20:07.548Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-31T01:31:50.230Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-click-heart/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
